@@ -42,7 +42,8 @@ var header = document.getElementsByClassName("header");
 var sidebar = document.getElementById("sidebar")
 var firstTitle = document.getElementsByClassName("firstPartTitle")
 var firstText = document.getElementsByClassName("firstPartText")
-var firstFiverr = document.getElementsByClassName("firstPartFiverr")
+var firstFiverrTop = document.getElementsByClassName("firstPartFiverrTop")
+var firstFiverrBottom = document.getElementsByClassName("firstPartFiverrBottom")
 
 function doSomething() {
   // console.log(lastKnownScrollPosition)
@@ -50,7 +51,7 @@ function doSomething() {
 
   if (!sidebar.classList.contains('active')) {
     // title & nav
-    if (lastKnownScrollPosition > 250) {
+    if (lastKnownScrollPosition > 600) {
       landTitle[0].classList.add("active");
       landNav[0].classList.add("active");
       header[0].classList.add("active");
@@ -61,15 +62,20 @@ function doSomething() {
     }
   }
 
-  if (lastKnownScrollPosition > 550) {
+  if (lastKnownScrollPosition > 450) {
     firstTitle[0].classList.add("active");
-    firstText[0].classList.add("active");
-    firstFiverr[0].classList.add("active");
+    firstFiverrTop[0].classList.add("active");
+    firstFiverrBottom[0].classList.add("active");
   } else {
     firstTitle[0].classList.remove("active");
-    firstText[0].classList.remove("active");
-    firstFiverr[0].classList.remove("active");
+    firstFiverrTop[0].classList.remove("active");
+    firstFiverrBottom[0].classList.remove("active");
   }  
+  if (lastKnownScrollPosition > 600) {
+    firstText[0].classList.add("active");
+  } else {
+    firstText[0].classList.remove("active");
+  }
 }
 
 document.addEventListener('scroll', function(e) {
@@ -85,3 +91,21 @@ document.addEventListener('scroll', function(e) {
   }
 });
 
+var fiverrTopH2Contain = document.getElementsByClassName("fiverrTopH2Contain");
+var fiverrTopH2 = document.getElementsByClassName("fiverrTopH2");
+var fiverrTopP = document.getElementsByClassName("fiverrTopP");
+var briefcase = document.getElementsByClassName("fa-briefcase");
+
+setInterval(() => {
+  if (document.querySelector(".firstPartFiverrTop:hover") != null) {
+      fiverrTopH2Contain[0].classList.add("hovered");
+      fiverrTopH2[0].classList.add("hovered");
+      fiverrTopP[0].classList.add("hovered")
+      briefcase[0].classList.add("hovered")
+  } else {
+    fiverrTopH2Contain[0].classList.remove("hovered");
+    fiverrTopH2[0].classList.remove("hovered");
+    fiverrTopP[0].classList.remove("hovered")
+    briefcase[0].classList.remove("hovered")
+  }
+}, 10);
