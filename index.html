@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Passion+One&family=Raleway:wght@200&family=Spicy+Rice&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Passion+One&family=Raleway:wght@200&family=Spicy+Rice&family=Exo:wght@800&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Mars Prins</title>
 </head>
-<body>
+<body class="body">
     <div class="blueBG"></div>
 
+    <div class="languages">
+        <div class="currLanguage">
+            <a href="#eng" data-reload><img class="usa" src="img/usa-icon.png" alt=""></a>
+            <a href="#ned" data-reload><img class="dutch" src="img/dutch-icon.png" alt=""></a>
+        </div>
+    </div>
+
     <div class="landingPart">
+        
         
         <!-- <div class="landSocials">
             <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
@@ -42,10 +50,14 @@
         </header>
         <h1 class="landTitle">Mars Prins;</h1>
         <ul class="landNav">
-            <li><a href="#" class="links">What I Will Do For You</a></li>
-            <li><a href="#" class="links">My Work</a></li>
-            <li><a href="#aboutMe" class="links">About Me</a></li>
+            <li><a href="#firstPart" id="landNav1" class="links">What I Will Do For You</a></li>
+            <li><a href="#" id="landNav2" class="links">My Work</a></li>
+            <li><a href="#" id="landNav3" class="links">Join The Team!</a></li>
             <li><a href="#" class="links">Contact</a></li>
+            <!-- <li><a href="#firstPart" class="links2">What I Will Do For You</a></li>
+            <li><a href="#" class="links2">My Work</a></li>
+            <li><a href="#" class="links2">About Me</a></li>
+            <li><a href="#" class="links2">Contact</a></li> -->
         </ul>
         <img src="img/thumbnail2.png" alt="" class="landImage"/>
         <div class="cloudContainer"></div>
@@ -57,25 +69,105 @@
         <div id="firstPart" class="firstPart">
             <div class="firstPartContainer">
                 <div class="firstPart-gridItem firstPartText"></div>
-                <div class="firstPart-gridItem firstPartFiverrTop">
+                <div onclick="contact()" class="firstPart-gridItem firstPartFiverrTop">
                     <div class="fiverrTopH2Contain">
                         <span id="fiverrTopH2" class="fiverrTopH2">
-                            Contact Us <br/>
-                            <var>Hire Us <br/>
-                            Work With Us <br/>
-                            Message Us <br/>
-                            Book Us</var> 
+                            Contact <br/>
+                            <var>Hire <br/>
+                            Message <br/>
+                            Book </var> 
                         </span>
+                        
                     </div>
+                    <h2 id="fiverrTopMe" class="fiverrTopMe">Me!</h2>
                     <i class="fa-solid fa-paper-plane"></i>
-                    <p class="fiverrTopP">When you want to work with us, you can either <a href="#">contact us</a> or message us on <a href="#" class="fiverr">Fiverr</a></p>
+                    <p id="fiverrTopParagraph" class="fiverrTopP">Let's get in touch! <strong>Tell us about your needs</strong> and we'll talk about what <strong>we Will deliver!</strong> Dont know fully yet <strong>what you want to do</strong>? We'll help you!</p>
                 </div>
-                <div class="firstPart-gridItem firstPartFiverrBottom"></div>
+                <div onclick="fiverr()" class="firstPart-gridItem firstPartFiverrBottom">
+                    <img src="img/fiverrIcon.png" alt="" class="fiverrLogo">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <p id="fiverrBottomPara" class="fiverrBottomP">Alternatively, you can message us on <a href="https://www.fiverr.com/share/EormkD" target="_blank">Fiverr</a></p>
+                </div>
                 <div class="firstPart-gridItem firstPartTitle">
                     <div class="firstPartTitleContainer">
-                        <h2> What I Will Do For You.</h2>
-                        <h2> What I Will Do For You.</h2>
+                        <h2 id="firstTitle1"> What I Will Do For You;</h2>
+                        <h2 id="firstTitle2"> What I Will Do For You;</h2>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div id="secondPart" class="secondPart">
+            <div class="secondPartContainer">
+                <div class="secondPart-gridItem secondPartTitle">
+                    <h2 class="myWork">My Work;</h2>
+                    <p class="myWorkP">Made by me</p>
+                </div>
+                <div class="secondPart-gridItem work1Pic">
+                    <img class="workImages" src="img/livianLaptop.png" alt="">
+                </div>
+                <div class="secondPart-gridItem work1Text">
+                    <p class="workParagraphs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nihil alias debitis provident cupiditate quisquam, nemo iste error illo veritatis.</p>
+                </div>
+                <div class="secondPart-gridItem work1Button">
+                    <a><button class="workDemos">Demo</button></a>
+                </div>
+                <div class="secondPart-gridItem work2Pic">
+                    <img class="workImages" src="img/livianLaptop.png" alt="">
+                </div>
+                <div class="secondPart-gridItem work2Text">
+                    <p class="workParagraphs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nihil alias debitis provident cupiditate quisquam, nemo iste error illo veritatis.</p>
+                </div>
+                <div class="secondPart-gridItem work2Button">
+                    <a><button class="workDemos">Demo</button></a>
+                </div>
+                <div class="secondPart-gridItem work3Pic">
+                    <img class="workImages" src="img/livianLaptop.png" alt="">
+                </div>
+                <div class="secondPart-gridItem work3Text">
+                    <p class="workParagraphs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nihil alias debitis provident cupiditate quisquam, nemo iste error illo veritatis.</p>
+                </div>
+                <div class="secondPart-gridItem work3Button">
+                    <a><button class="workDemos">Demo</h2></a>
+                </div>
+            </div>
+        </div>
+        <div class="thirdPart" id="thirdPart">
+            <div class="thirdPartContainer">
+                <div class="trans"></div>
+                <div class="review1">
+                    <div class="reviewName">Rober</div>
+                    <div class="reviewText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero velit quibusdam corporis temporibus hic dolorem soluta dolore numquam? Blanditiis in id distinctio ipsam eum quis nostrum aspernatur aperiam eaque accusamus, laudantium illum optio adipisci perferendis, fuga ratione tenetur unde obcaecati!</div>
+                    <div class="reviewStars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <div class="review2">
+                    <div class="reviewName">Lotte</div>
+                    <div class="reviewText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero velit quibusdam corporis temporibus hic dolorem soluta dolore numquam? Blanditiis in id distinctio ipsam eum quis nostrum aspernatur aperiam eaque accusamus, laudantium illum optio adipisci perferendis, fuga ratione tenetur unde obcaecati!</div>
+                    <div class="reviewStars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fourthPart">
+            <div class="fourthPartContainer">
+                <h2 class="contactHead">Contact</h2>
+                <div class="formContainer">
+                    <form action="" class="contact">
+                        <input type="text" name="" class="name" placeholder="Full Name...">
+                        <input type="email" name="" id="" class="email" placeholder="Email...">
+                        <textarea name="" id="" cols="30" rows="10" class="text" placeholder="Text..."></textarea>
+                        <input class="submit" type="submit" value="Submit">
+                    </form>
                 </div>
             </div>
         </div>
