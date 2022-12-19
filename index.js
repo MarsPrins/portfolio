@@ -3,6 +3,11 @@ function delay(time) {
 }
 
 
+
+
+
+
+
 function myFunction(x) {
   x.classList.toggle('change');
   document.getElementById('sidebar').classList.toggle('active');
@@ -20,7 +25,7 @@ var firstText = document.getElementsByClassName("firstPartText")
 var firstFiverrTop = document.getElementsByClassName("firstPartFiverrTop")
 var firstFiverrBottom = document.getElementsByClassName("firstPartFiverrBottom")
 
-doSomething
+
 
 function doSomething() {
   // console.log(lastKnownScrollPosition)
@@ -88,6 +93,15 @@ setInterval(() => {
     paperPlane[0].classList.remove("hovered");
     me[0].classList.remove('hovered')
   }
+  doSomething()
+var phone = document.getElementsByClassName('phone');
+  if (screen.width < 500) {
+    phone[0].classList.add('active');
+    document.body.style.position = "fixed"
+  } else {
+    phone[0].classList.remove('active');
+    document.body.style.position = "relative"
+  }
 }, 10);
 
 
@@ -111,6 +125,10 @@ var language = {
     fiverrTopMe: 'Mij!',
     fiverrTopParagraph: "<strong>Laten we in gesprek gaan!</strong> Vertel wat u van plan bent en dan zullen we praten over <strong>wat ik voor u kan beteken!</strong> Weet u nog niet zeker wat u gedaan wil hebben?<strong> Ik help u!</strong>",
     fiverrBottomPara: 'Alternatief, Kunt u ons berichten op <a href="https://www.fiverr.com/share/EormkD" target="_blank">Fiverr</a>',
+    myWork: 'Mijn Werk',
+    fullName: 'Hele naam...',
+    text: 'Tekst...',
+    submit: 'Opsturen',
   }
 };
 
@@ -126,6 +144,10 @@ if (window.location.hash) {
     fiverrTopParagraph.innerHTML = language.ned.fiverrTopParagraph;
     fiverrTopParagraph.innerHTML = language.ned.fiverrTopParagraph;
     fiverrBottomPara.innerHTML = language.ned.fiverrBottomPara;
+    myWork.textContent = language.ned.myWork;
+    fullName.placeholder = language.ned.fullName;
+    text.placeholder = language.ned.text;
+    submit.value = language.ned.submit;
   }
 }
 
@@ -136,3 +158,8 @@ for (i = 0; i <= dataReload.length; i++) {
     delay(200).then(() => location.reload(true))
   }
 }
+
+
+
+
+

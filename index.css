@@ -59,24 +59,124 @@ body {
     border-radius: 25px;
 }
 
-@media only screen and (max-width: 1150px) {
+.phone {
+  width: 110vw;
+  height: 110vh;
+  position: fixed;
+  background-color: var(--bg);
+  z-index: 997;
+  transform: translateX(10000px);
+}
+
+.phone.active {
+  transform: translateX(0);
+}
+
+.phoneHead {
+  text-align: center;
+  position: relative;
+  top: 40%;
+  translate: 0 -50%;
+  font-size: 30px;
+  line-height: 40px;
+  width: 85%;
+  font-family: var(--titleFont);
+}
+
+@media only screen and (max-width: 1360px) {
   img.landImage {
     display: none;
   }
 }
 
-@media only screen and (max-width: 1600px) {
-  .secondPartContainer {
-    grid-template-columns: 1fr;
+@media only screen and (min-width: 1075px) {
+  .work1Text {
+    grid-row: 2 / 4;
+    grid-column: 2 / 3;
   }
+  .workImages {
+    top: 50%;
+    translate: 0 -50%;
+  }
+  .work1Pic {
+    grid-column: 1/2;
+  }
+  .workHeads {
+    font-size: 40px;
+    bottom: 60%;
+    
+  }
+  .workParagraphs {
+    top: 30%;
+    position: absolute;
+  font-size: 30px;
+  }
+  .workDemos {
+    position: absolute;
+    top: 60%;
+  }
+}
+@media only screen and (max-width: 1075px) {
+  .work1Text {
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+  }
+  .secondPartContainer {
+    height: 150vh;
+  }
+  .workImages {
+    top: 100%;
+    translate: 0 -100%;
+  }
+  .work1Pic {
+    grid-column: 1/4;
+  }
+  .workHeads {
+    font-size: 25px;
+    
+  }
+  .workParagraphs {
+    top: 5%;
+    position: relative;
+  font-size: 20px;
+  }
+  .workDemos {
+    position: relative;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .formContainer {
+    min-width: 100vw;
+  }
+  .review1 {
+    min-width: 95vw;
+    transform: translateX(15%);
+  }
+  .review2 {
+    min-width: 95vw;
+    transform: translateX(-10%);
+  }
+  /* .reviewText {
+    font-size: 15px;
+    font-weight: bold;
+  } */
+}
+@media only screen and (min-width: 1000px) {
+  /* .reviewText {
+    font-size: 20px;
+  } */
 }
 
 @media only screen and (max-width: 599px) {
   .landTitle {
     font-size: 60px;
   }
+  
 }
-
 @media only screen and (min-width: 600px) {
   .landTitle {
     font-size: 100px;
@@ -159,7 +259,7 @@ body {
 
 .cloud {
   position: absolute;
-  top: 350px;
+  top: 450px;
   left: 50px;
   z-index: 10;
   width: 1250px;
@@ -268,7 +368,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 999;
+    z-index: 996;
     transform: translateY(-150px);
     transition: .4s;
 }
@@ -457,6 +557,7 @@ body {
 }
 
 .firstPart {
+  z-index: 99;
     width: 100%;
     height: 100vh;
     background-color: var(--bgCloud);
@@ -784,7 +885,7 @@ var {
 
 .secondPart {
   width: 100%;
-  height: 300vh;
+  height: auto;
   position: relative;
   background: linear-gradient(to right,var(--bgTrans),var(--bgTrans)),url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
   background-position: center;
@@ -792,7 +893,8 @@ var {
 
 .secondPartContainer {
   display: grid;
-  height: 100%;
+  grid-auto-rows: minmax(100px, 400px);
+  min-height: 100vh;
   width: 90%;
   margin-left: 5%;
   grid-gap: 2rem;
@@ -832,45 +934,50 @@ var {
 
 .work1Pic {
   grid-row: 2 / 4;
-  grid-column: 1 / 2;
+  /* grid-column: 1 / 2; */
 }
 
 .workImages,
 .work1Pic img {
   position: absolute;
   width: 100%;
-  top: 50%;
-  translate: 0 -50%;
+  /* top: 50%; */
+  /* translate: 0 -50%; */
 }
 
 .work1Text {
-  grid-row: 2/3;
-  grid-column: 2/3;
+  /* grid-row: 2/4; */
+  /* grid-column: 2/3; */
+  border: solid 2px red;
+}
+
+.workHeads {
+  /* font-size: 3vw; */
+  font-family: var(--titleFont);
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  /* bottom: 60%; */
 }
 
 .workParagraphs,
 .work1Text p {
-  position: absolute;
+  /* position: absolute; */
   font-family: var(--mainFont);
   font-weight: 600;
-  font-size: 30px;
+  /* font-size: 30px; */
   text-align: center;
-  bottom: 0%;
+  /* top: 30%; */
   color: var(--txtBlack);
+  padding: 20px;
 }
 
-.work1Button {
-  grid-row: 3/4;
-  grid-column: 2/3;
-}
-
-.workDemos,
-.work1Button button {
-  position: absolute;
+.workDemos {
+  /* position: absolute; */
   left: 50%;
   translate: -50%;
-  top: 0%;
-  font-size: 2vw;
+  /* top: 60%; */
+  font-size: 20px;
   color: var(--txtBlack);
   font-family: var(--boldTitleFont);
   opacity: .7;
@@ -899,14 +1006,10 @@ var {
 }
 
 .work2Text {
-  grid-row: 4/5;
+  grid-row: 4/6;
   grid-column: 1/2;
 }
 
-.work2Button {
-  grid-row: 5/6;
-  grid-column: 1/2;
-}
 
 .work3Pic {
   grid-row: 6 / 8;
@@ -914,14 +1017,10 @@ var {
 }
 
 .work3Text {
-  grid-row: 6/7;
+  grid-row: 6/8;
   grid-column: 2/3;
 }
 
-.work3Button {
-  grid-row: 7/8;
-  grid-column: 2/3;
-}
 
 
 
@@ -955,7 +1054,8 @@ var {
 
 .review1 {
   width: 50%;
-  height: 20%;
+  min-height: 20%;
+  max-height: 28%;
   border-radius: 18px;
   background-color: rgb(235, 254, 255);
   position: absolute;
@@ -963,6 +1063,9 @@ var {
   top: 35%;
   translate: -50% -50%;
   padding: 20px;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
 }
 
 .reviewName {
@@ -972,6 +1075,7 @@ var {
 }
 
 .reviewText {
+  height: 100%;
   margin-top: 20px;
   font-size: 20px;
   font-family: var(--mainFont);
@@ -987,7 +1091,8 @@ var {
 
 .review2 {
   width: 50%;
-  height: 20%;
+  min-height: 20%;
+  max-height: 28%;
   border-radius: 18px;
   background-color: rgb(225, 241, 241);
   position: absolute;
@@ -995,6 +1100,9 @@ var {
   top: 70%;
   translate: -50% -50%;
   padding: 20px;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
 }
 
 
@@ -1023,7 +1131,7 @@ var {
   width: 40%;
   position: relative;
   left: 50%;
-  top: 40%;
+  top: 60%;
   translate: -50% -50%;
   height: 60%;
   background-color: rgb(224, 254, 255);
@@ -1089,6 +1197,9 @@ var {
   width: 100%;
   float: right;
   background-color: var(--bg);
+  color: var(--txtBlack);
+  font-family: var(--mainFont);
+  font-weight: 600;
   transition: .2s;
   cursor: pointer;
 }
@@ -1100,8 +1211,9 @@ var {
 .contactHead {
   font-family: var(--boldTitleFont);
   font-size: 100px;
-  position: relative;
-  left: 40%;
-  top: 3%;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  translate: -50%;
   color: var(--txtBlack);
 }
