@@ -44,10 +44,10 @@
                         </div>
               
                         <ul id="menu">
-                            <li><a href="#firstPart">What I Will Do For You</a></li>
-                            <li><a href="#">My Work</a></li>
-                            <li><a href="#">About Me</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a id="headNav1" href="#firstPart">What I Will Do For You</a></li>
+                            <li><a id="headNav2" href="#secondPart">My Work</a></li>
+                            <li><a id="headNav3" href="#thirdPart">Personal Reviews</a></li>
+                            <li><a id="headNav4" href="#fourthPart">Contact</a></li>
                         </ul>
                     </div>
                   </div>
@@ -56,9 +56,9 @@
         <h1 class="landTitle">Mars Prins;</h1>
         <ul class="landNav">
             <li><a href="#firstPart" id="landNav1" class="links">What I Will Do For You</a></li>
-            <li><a href="#" id="landNav2" class="links">My Work</a></li>
-            <li><a href="#" id="landNav3" class="links">Join The Team!</a></li>
-            <li><a href="#" class="links">Contact</a></li>
+            <li><a href="#secondPart" id="landNav2" class="links">My Work</a></li>
+            <li><a href="#thirdPart" id="landNav3" class="links">Personal Reviews</a></li>
+            <li><a href="#fourthPart" class="links">Contact</a></li>
             <!-- <li><a href="#firstPart" class="links2">What I Will Do For You</a></li>
             <li><a href="#" class="links2">My Work</a></li>
             <li><a href="#" class="links2">About Me</a></li>
@@ -73,7 +73,12 @@
     <div class="content">
         <div id="firstPart" class="firstPart">
             <div class="firstPartContainer">
-                <div class="firstPart-gridItem firstPartText"></div>
+                <div class="firstPart-gridItem firstPartText">
+                    <h2 id="firstPartTextHead">Hover Me</h2>
+                    <p id="firstPartTextPara">I'll help you with your website ideas and execute them if possible!<br/> You might have thought of a good idea but dont know yet how you want to execute it, that's no problem because we can brainstorm and we will figure it out together!</p>
+                    <h3 class="firstInfo">Info</h3>
+                    <i class="fa-solid fa-info"></i>
+                </div>
                 <div onclick="contact()" class="firstPart-gridItem firstPartFiverrTop">
                     <div class="fiverrTopH2Contain">
                         <span id="fiverrTopH2" class="fiverrTopH2">
@@ -107,11 +112,11 @@
                     <h2 id="myWork" class="myWork">My Work;</h2>
                 </div>
                 <div class="secondPart-gridItem work1Pic">
-                    <img class="workImages" src="img/livianLaptop.png" alt="">
+                    <img class="workImages" src="img/livianLaptop .png" alt="">
                 </div>
                 <div class="secondPart-gridItem work1Text">
                     <h2 class="workHeads">Livian Beats</h2>
-                    <p class="workParagraphs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nihil alias debitis provident cupiditate quisquam, nemo iste error illo veritatis.</p>
+                    <p id="workParagraph1" class="workParagraphs">A website for the up and coming producer <stong>Livian Beats</stong> for him to upload his music and sell it to the public</p>
                     <a><button class="workDemos">Demo</button></a>
                 </div>
                 <!-- <div class="secondPart-gridItem work2Pic">
@@ -137,7 +142,7 @@
                 <div class="trans"></div>
                 <div class="review1">
                     <div class="reviewName">Rober</div>
-                    <div class="reviewText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero velit quibusdam corporis temporibus hic dolorem soluta dolore numquam? Blanditiis in id distinctio ipsam eum quis nostrum aspernatur aperiam eaque accusamus, laudantium illum optio adipisci perferendis, fuga ratione tenetur unde obcaecati!</div>
+                    <div id="reviewText1" class="reviewText">Mars made a beautiful website for me which i needed for my business. Now i can sell my product from my own website instead of needing a third party company. He was good to work with and happy to help me with new ideas (it was also nice that he speaks my first language, dutch)</div>
                     <div class="reviewStars">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -148,7 +153,7 @@
                 </div>
                 <div class="review2">
                     <div class="reviewName">Lotte</div>
-                    <div class="reviewText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero velit quibusdam corporis temporibus hic dolorem soluta dolore numquam? Blanditiis in id distinctio ipsam eum quis nostrum aspernatur aperiam eaque accusamus, laudantium illum optio adipisci perferendis, fuga ratione tenetur unde obcaecati!</div>
+                    <div id="reviewText2" class="reviewText">I got an idea for a website but i then realized, that i can't actually make a website. So i contacted Mars to execute my idea, he helped me with the finishing touches and delivered a good looking and working website. i'm very happy with the outcome.</div>
                     <div class="reviewStars">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -163,16 +168,22 @@
             <div class="fourthPartContainer">
                 <h2 class="contactHead">Contact</h2>
                 <div class="formContainer">
-                    <form action="" class="contact">
-                        <input id="fullName" type="text" name="" class="name" placeholder="Full Name...">
-                        <input type="email" name="" id="" class="email" placeholder="Email...">
-                        <textarea name="" id="text" cols="30" rows="10" class="text" placeholder="Text..."></textarea>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){
+                        window.location='index.html'; document.querySelector('.succesfully').classList.add('active');} else {document.querySelector('.succesfully').classList.remove('active');}"></iframe>
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdAYKd2dMClVaLgKl0UpNP51JIKndMx22pDnN5t_RFIXoIHOw/formResponse" class="contact" method="POST" target="hidden_iframe" onsubmit="submitted=true">
+                        <input required id="fullName" type="text" name="entry.1951229376" class="name" placeholder="Full Name...">
+                        <input required type="email" name="entry.1085141388" id="" class="email" placeholder="Email...">
+                        <textarea required name="entry.552126823" id="text" cols="30" rows="10" class="text" placeholder="Text..."></textarea>
                         <input id="submit" class="submit" type="submit" value="Submit">
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <div class="succesfully">Submitted Succesfully</div>
+
 
     <script src="index.js"></script>
 </body>

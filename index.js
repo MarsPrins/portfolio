@@ -2,7 +2,7 @@ function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
 
-
+var submitted = false;
 
 
 
@@ -93,6 +93,21 @@ setInterval(() => {
     paperPlane[0].classList.remove("hovered");
     me[0].classList.remove('hovered')
   }
+
+  var para = document.querySelector('#firstPartTextPara');
+  var h = document.querySelector('#firstPartTextHead');
+  var firstText = document.querySelector('.firstPartText');
+
+  if (document.querySelector(".firstPartText:hover") != null) {
+    para.classList.add('hovered')
+    h.classList.add('hovered')
+    firstText.classList.add('hovered')
+  } else {
+    para.classList.remove('hovered')
+    h.classList.remove('hovered')
+    firstText.classList.remove('hovered')
+  }
+
   doSomething()
 var phone = document.getElementsByClassName('phone');
   if (screen.width < 500) {
@@ -120,12 +135,16 @@ var language = {
   ned: {
     landNav1: 'Wat Ik Voor U Zal Doen',
     landNav2: 'Mijn Werk',
-    landNav3: 'Kom Bij Het Team!',
+    landNav3: 'Persoonlijke Reviews',
+    firstPartTextPara: 'Ik ga u helpen met uw website ideeën en zal ze uitvoeren als het mogelijk is! <br/> Misschien heeft u een goed idee bedacht maar weet u nog niet hoe u het wil uitvoeren, dat is geen probleem! We zullen dan brainstormen en dan vinden we het samen uit!',
     fiverrTopH2: ' Contact <br/><var>Bericht <br/>Benader <br/>Werk Met </var>',
     fiverrTopMe: 'Mij!',
     fiverrTopParagraph: "<strong>Laten we in gesprek gaan!</strong> Vertel wat u van plan bent en dan zullen we praten over <strong>wat ik voor u kan beteken!</strong> Weet u nog niet zeker wat u gedaan wil hebben?<strong> Ik help u!</strong>",
     fiverrBottomPara: 'Alternatief, Kunt u ons berichten op <a href="https://www.fiverr.com/share/EormkD" target="_blank">Fiverr</a>',
     myWork: 'Mijn Werk',
+    workParagraph1: 'Een website voor de startende producer <strong>Livian Beats</strong> voor hem om zijn muziek te uploaden en te verkopen voor het publiek',
+    reviewText1: 'Mars heeft een prachtige website gemaakt voor mij die ik nodig had voor mijn business. Nu kan ik mijn product verkopen vanaf mijn eigen website in plaats van van een dere partij bedrijf. Hij was goed om mee te werken en blij om mij te helpen met nieuwe ideeën (het was ook fijn dat hij mijn moeder taal spreekt, nederlands)',
+    reviewText2: 'Ik had een idee voor een website maar toen bedacht ik me dat ik helemaal geen websites kan maken. Dus ik nam contact op met Mars om mijn idee uit te voeren, hij hielp me met de puntjes op de i en leverde een mooie en goed werkende website af. Ik ben heel blij met me uitkomst',
     fullName: 'Hele naam...',
     text: 'Tekst...',
     submit: 'Opsturen',
@@ -135,8 +154,12 @@ var language = {
 if (window.location.hash) {
   if (window.location.hash === "#ned") {
     landNav1.textContent = language.ned.landNav1;
+    headNav1.textContent = language.ned.landNav1;
     landNav2.textContent = language.ned.landNav2;
+    headNav2.textContent = language.ned.landNav2;
     landNav3.textContent = language.ned.landNav3;
+    headNav3.textContent = language.ned.landNav3;
+    firstPartTextPara.innerHTML = language.ned.firstPartTextPara;
     firstTitle1.textContent = language.ned.landNav1 + ";";
     firstTitle2.textContent = language.ned.landNav1 + ";";
     fiverrTopH2.innerHTML = language.ned.fiverrTopH2;
@@ -145,6 +168,9 @@ if (window.location.hash) {
     fiverrTopParagraph.innerHTML = language.ned.fiverrTopParagraph;
     fiverrBottomPara.innerHTML = language.ned.fiverrBottomPara;
     myWork.textContent = language.ned.myWork;
+    workParagraph1.innerHTML = language.ned.workParagraph1;
+    reviewText1.textContent = language.ned.reviewText1;
+    reviewText2.textContent = language.ned.reviewText2;
     fullName.placeholder = language.ned.fullName;
     text.placeholder = language.ned.text;
     submit.value = language.ned.submit;
