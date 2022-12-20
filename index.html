@@ -4,35 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/thumbnail2.png">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Passion+One&family=Raleway:wght@200&family=Spicy+Rice&family=Exo:wght@800&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Mars Prins</title>
 </head>
-<body class="body">
+<body class="body" >
     <div class="blueBG"></div>
+
 
     <div class="languages">
         <div class="currLanguage">
-            <a href="#eng" data-reload><img class="usa" src="img/usa-icon.png" alt=""></a>
-            <a href="#ned" data-reload><img class="dutch" src="img/dutch-icon.png" alt=""></a>
+            <a href="#eng" class="english" data-reload><img class="usa" src="img/usa-icon.png" alt=""></a>
+            <a href="#ned" class="nederlands" data-reload><img class="dutch" src="img/dutch-icon.png" alt=""></a>
         </div>
     </div>
 
     <div class="phone">
-        <h3 class="phoneHead">Sorry, deze website is nog niet beschikbaar op telefoons...<br/>
-                                Open de link op een computer, laptop of tablet<br/></h3>
+        <h3 id="phoneHead" class="phoneHead">Sorry, this website is not yet available on phones... <br/> Open the link on a computer, laptop or tablet</h3>
     </div>
 
     <div class="landingPart">
         
-        
-        <!-- <div class="landSocials">
-            <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="paypal"><i class="fa-brands fa-paypal"></i></a>
-            <a href="#" class="github"><i class="fa-brands fa-github"></i></a>
-            <a href="#" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#" class="email"><i class="fa-solid fa-square-envelope"></i></a>
-        </div> -->
         <header class="header">
             <div class="headCont">
                 <div class="dropMenu">
@@ -44,10 +37,10 @@
                         </div>
               
                         <ul id="menu">
-                            <li><a id="headNav1" href="#firstPart">What I Will Do For You</a></li>
-                            <li><a id="headNav2" href="#secondPart">My Work</a></li>
-                            <li><a id="headNav3" href="#thirdPart">Personal Reviews</a></li>
-                            <li><a id="headNav4" href="#fourthPart">Contact</a></li>
+                            <li><a onclick="headnav1()" id="headNav1" href="#firstPart">What I Will Do For You</a></li>
+                            <li><a onclick="headnav1()" id="headNav2" href="#secondPart">My Work</a></li>
+                            <li><a onclick="headnav1()" id="headNav3" href="#thirdPart">Personal Reviews</a></li>
+                            <li><a onclick="headnav1()" id="headNav4" href="#fourthPart">Contact</a></li>
                         </ul>
                     </div>
                   </div>
@@ -68,6 +61,8 @@
         <div class="cloudContainer"></div>
         <img class="cloud" src="img/cloud.png" alt="">
         <img class="cloud2" src="img/cloud.png" alt="">
+
+        .
     </div>
 
     <div class="content">
@@ -117,7 +112,7 @@
                 <div class="secondPart-gridItem work1Text">
                     <h2 class="workHeads">Livian Beats</h2>
                     <p id="workParagraph1" class="workParagraphs">A website for the up and coming producer <stong>Livian Beats</stong> for him to upload his music and sell it to the public</p>
-                    <a><button class="workDemos">Demo</button></a>
+                    <a href="livian-beats-demo/index.html"><button class="workDemos">Demo</button></a>
                 </div>
                 <!-- <div class="secondPart-gridItem work2Pic">
                     <img class="workImages" src="img/livianLaptop.png" alt="">
@@ -173,7 +168,7 @@
                     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdAYKd2dMClVaLgKl0UpNP51JIKndMx22pDnN5t_RFIXoIHOw/formResponse" class="contact" method="POST" target="hidden_iframe" onsubmit="submitted=true">
                         <input required id="fullName" type="text" name="entry.1951229376" class="name" placeholder="Full Name...">
                         <input required type="email" name="entry.1085141388" id="" class="email" placeholder="Email...">
-                        <textarea required name="entry.552126823" id="text" cols="30" rows="10" class="text" placeholder="Text..."></textarea>
+                        <textarea required name="entry.552126823" id="text" cols="30" rows="10" class="text" placeholder="Message.."></textarea>
                         <input id="submit" class="submit" type="submit" value="Submit">
                     </form>
                 </div>

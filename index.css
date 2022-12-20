@@ -83,6 +83,7 @@ body {
   font-family: var(--titleFont);
 }
 
+
 @media only screen and (max-width: 1360px) {
   img.landImage {
     display: none;
@@ -615,45 +616,13 @@ body {
     left: 0;
 }
 
-/* .landSocials{
-    position: relative;
-    bottom: 95%;
-}
 
-.landSocials a {
-    text-decoration: none;
-    color: var(--txtWhite);
-    position: relative;
-    margin-left: -15%;
-    top: 0;
-    font-size: 25px;
-    animation: socials ease-in-out 5s forwards;
-    padding: 20px;
-}
 
-.landSocials a:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--hover);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
 
-.landSocials a:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
 
-@keyframes socials {
-    100% {
-        margin-left: 5%;
-    }
-} */
+
+
+
 
 .content {
     height: 100%;
@@ -733,7 +702,7 @@ body {
   text-align: center;
   font-family: var(--boldTitleFont);
   color: var(--txtBlack);
-  transition: .4s;
+  transition: 1s;
 }
 
 #firstPartTextHead.hovered {
@@ -754,7 +723,7 @@ body {
   position: absolute;
   font-family: var(--mainFont);
   transform: translateX(-1000px);
-  transition: .4s ease-out;
+  transition: 1s ease-in-out;
   scale: .6;
   opacity: 0;
 }

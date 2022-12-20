@@ -2,9 +2,26 @@ function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
 
+
 var submitted = false;
 
 
+var togglebtn = document.querySelector('.toggle-btn');
+function headnav1() {
+  togglebtn.classList.toggle('change');
+  document.getElementById('sidebar').classList.toggle('active');
+}
+
+
+function english() {
+  delay(200).then(() => 
+  localStorage.setItem('wanted-language', 'english'))
+}
+
+function nederlands() {
+  delay(200).then(() => 
+  localStorage.setItem('wanted-language', 'nederlands'))
+}
 
 
 
@@ -146,13 +163,43 @@ var language = {
     reviewText1: 'Mars heeft een prachtige website gemaakt voor mij die ik nodig had voor mijn business. Nu kan ik mijn product verkopen vanaf mijn eigen website in plaats van van een dere partij bedrijf. Hij was goed om mee te werken en blij om mij te helpen met nieuwe ideeën (het was ook fijn dat hij mijn moeder taal spreekt, nederlands)',
     reviewText2: 'Ik had een idee voor een website maar toen bedacht ik me dat ik helemaal geen websites kan maken. Dus ik nam contact op met Mars om mijn idee uit te voeren, hij hielp me met de puntjes op de i en leverde een mooie en goed werkende website af. Ik ben heel blij met me uitkomst',
     fullName: 'Hele naam...',
-    text: 'Tekst...',
+    text: 'Bericht...',
     submit: 'Opsturen',
+    phoneHead: 'Sorry, deze website is nog niet beschikbaar op telefoons...<br/> Open de link op een computer, laptop of tablet',
   }
 };
 
+// var wantedLang = localStorage.getItem('wanted-language');
+
+// function checkLang() {
+//   if (wantedLang == 'nederlands') {
+//     window.location.hash = "#ned"
+//     // refresh()
+//   }
+//   if (wantedLang == 'english') {
+//     window.location.hash = "#eng"
+//     // refresh()
+//   }
+// }
+
+// function refresh()
+// {
+//   if( window.localStorage )
+//   {
+//     if( !localStorage.getItem('firstLoad') )
+//     {
+//       localStorage['firstLoad'] = true;
+//       window.location.reload();
+//     }  
+//     else
+//       localStorage.removeItem('firstLoad');
+//   }
+// };
+
+
 if (window.location.hash) {
   if (window.location.hash === "#ned") {
+    nederlands()
     landNav1.textContent = language.ned.landNav1;
     headNav1.textContent = language.ned.landNav1;
     landNav2.textContent = language.ned.landNav2;
@@ -174,8 +221,16 @@ if (window.location.hash) {
     fullName.placeholder = language.ned.fullName;
     text.placeholder = language.ned.text;
     submit.value = language.ned.submit;
+    phoneHead.innerHTML = language.ned.phoneHead;
   }
+  if (window.location.hash === "#eng") {
+    english()
+  } 
 }
+
+// if (localstorage.getItem('wanted-language') == 'nederlands') {
+  
+// }
 
 
 
@@ -184,8 +239,3 @@ for (i = 0; i <= dataReload.length; i++) {
     delay(200).then(() => location.reload(true))
   }
 }
-
-
-
-
-
