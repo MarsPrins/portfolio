@@ -129,12 +129,12 @@ const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
 
 const songs = [
-    'Juice WRLD Ft Benny Blanco - Real Shit',
-    'Lil Baby, Lil Durk ft Rodwave - Rich Off Pain',
-    'Polo G – I Know',
-    'YG - My Nigga ft. Jeezy, Rich Homie Quan',
+    'UNTITLED',
+    'UNTITLED',
+    'UNTITLED',
+    'UNTITLED',
     'Benny Hill type Beat',
-    'DJ Khaled - Juice WRLD DID'
+    'UNTITLED'
 ];
 
 let songIndex = 4;

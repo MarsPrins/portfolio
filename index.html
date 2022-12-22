@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript, website, business, portfolio">
+    <meta name="description" content="I'm Mars Prins and i will build a website for you, your business and more!">
+
     <link rel="icon" type="image/x-icon" href="img/thumbnail2.png">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Passion+One&family=Raleway:wght@200&family=Spicy+Rice&family=Exo:wght@800&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,6 +15,23 @@
 <body class="body" >
     <div class="blueBG"></div>
 
+    <div class="dealBG">
+        <div class="deal">
+            <div class="dealContainer">
+                <i class="fa-solid fa-x"></i>
+                <h1 class="dealHead" id="dealHead"><strong class="sale">30% OFF<b class="mark">* <span  class="markSpan">10% off from €15, 30% off from €25. Only counts for your first order</span></b></strong> your first order</h1>
+                <p id="dealP" class="dealP">When you use code...</p>
+                <h2 class="code">XMAS</h2>
+                <button id="dealButt" class="dealButton">Get my 30% OFF!</button>
+                <div id="dealDenie" class="dealDenie">No thanks, i'd rather pay full price</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="discountSmall">
+        <h1 id="discountHead" class="discountHead">GET UP TO 30% OFF<b class="mark">* <p class="markSpan" id="markSpan">10% off from €15, 30% off from €25. Only counts for your first order</p></b> with code <b class="discountCode">XMAS</b></h1>
+        <i class="fa-solid fax fa-x"></i>
+    </div>
 
     <div class="languages">
         <div class="currLanguage">
@@ -37,10 +57,11 @@
                         </div>
               
                         <ul id="menu">
-                            <li><a onclick="headnav1()" id="headNav1" href="#firstPart">What I Will Do For You</a></li>
-                            <li><a onclick="headnav1()" id="headNav2" href="#secondPart">My Work</a></li>
-                            <li><a onclick="headnav1()" id="headNav3" href="#thirdPart">Personal Reviews</a></li>
-                            <li><a onclick="headnav1()" id="headNav4" href="#fourthPart">Contact</a></li>
+                            <li><a onclick="headnav1()" id="headNav1" >What We Will Do For You</a></li>
+                            <li><a onclick="headnav2()" id="headNav2" >Our Work</a></li>
+                            <li><a onclick="headnav3()" id="headNav3" >Personal Reviews</a></li>
+                            <li><a onclick="headnav5()" id="headNav5" >Packages</a></li>
+                            <li><a onclick="headnav4()" id="headNav4" >Contact</a></li>
                         </ul>
                     </div>
                   </div>
@@ -48,19 +69,18 @@
         </header>
         <h1 class="landTitle">Mars Prins;</h1>
         <ul class="landNav">
-            <li><a href="#firstPart" id="landNav1" class="links">What I Will Do For You</a></li>
-            <li><a href="#secondPart" id="landNav2" class="links">My Work</a></li>
-            <li><a href="#thirdPart" id="landNav3" class="links">Personal Reviews</a></li>
-            <li><a href="#fourthPart" class="links">Contact</a></li>
-            <!-- <li><a href="#firstPart" class="links2">What I Will Do For You</a></li>
-            <li><a href="#" class="links2">My Work</a></li>
-            <li><a href="#" class="links2">About Me</a></li>
-            <li><a href="#" class="links2">Contact</a></li> -->
+            <li><a onclick="landNavv1()" id="landNav1" class="links">What We Will Do For You</a></li>
+            <li><a onclick="landNavv2()" id="landNav2" class="links">Our Work</a></li>
+            <li><a onclick="landNavv3()" id="landNav3" class="links">Personal Reviews</a></li>
+            <li><a onclick="landNavv5()" id="landNav5" class="links" >Packages</a></li>
+            <li><a onclick="landNavv4()" class="links">Contact</a></li>
         </ul>
-        <img src="img/thumbnail2.png" alt="" class="landImage"/>
+        <!-- <img src="img/thumbnail2.png" alt="" class="landImage"/> -->
         <div class="cloudContainer"></div>
         <img class="cloud" src="img/cloud.png" alt="">
         <img class="cloud2" src="img/cloud.png" alt="">
+        <img class="cloud3" src="img/cloud.png" alt="">
+        <img class="cloud4" src="img/cloud.png" alt="">
 
         .
     </div>
@@ -70,7 +90,7 @@
             <div class="firstPartContainer">
                 <div class="firstPart-gridItem firstPartText">
                     <h2 id="firstPartTextHead">Hover Me</h2>
-                    <p id="firstPartTextPara">I'll help you with your website ideas and execute them if possible!<br/> You might have thought of a good idea but dont know yet how you want to execute it, that's no problem because we can brainstorm and we will figure it out together!</p>
+                    <p id="firstPartTextPara">We'll help you with your website ideas and execute them if possible!<br/> We will build you and your business a website starting at only <strong class="price">€9</strong><strong>.99!</strong></p>
                     <h3 class="firstInfo">Info</h3>
                     <i class="fa-solid fa-info"></i>
                 </div>
@@ -84,9 +104,9 @@
                         </span>
                         
                     </div>
-                    <h2 id="fiverrTopMe" class="fiverrTopMe">Me!</h2>
+                    <h2 id="fiverrTopMe" class="fiverrTopMe">Us!</h2>
                     <i class="fa-solid fa-paper-plane"></i>
-                    <p id="fiverrTopParagraph" class="fiverrTopP">Let's get in touch! <strong>Tell us about your needs</strong> and we'll talk about what <strong>we Will deliver!</strong> Dont know fully yet <strong>what you want to do</strong>? We'll help you!</p>
+                    <p id="fiverrTopParagraph" class="fiverrTopP">Let's get in touch! <strong>Contact us about your needs</strong> and we'll get back at you ASAP about what <strong>we Will deliver!</strong> Dont know fully yet <strong>what you want to do</strong>? we'll help you!</p>
                 </div>
                 <div onclick="fiverr()" class="firstPart-gridItem firstPartFiverrBottom">
                     <img src="img/fiverrIcon.png" alt="" class="fiverrLogo">
@@ -95,8 +115,8 @@
                 </div>
                 <div class="firstPart-gridItem firstPartTitle">
                     <div class="firstPartTitleContainer">
-                        <h2 id="firstTitle1"> What I Will Do For You;</h2>
-                        <h2 id="firstTitle2"> What I Will Do For You;</h2>
+                        <h2 id="firstTitle1"> What We Will Do For You;</h2>
+                        <h2 id="firstTitle2"> What We Will Do For You;</h2>
                     </div>
                 </div>
             </div>
@@ -104,7 +124,7 @@
         <div id="secondPart" class="secondPart">
             <div class="secondPartContainer">
                 <div class="secondPart-gridItem secondPartTitle">
-                    <h2 id="myWork" class="myWork">My Work;</h2>
+                    <h2 id="myWork" class="myWork">Our Work;</h2>
                 </div>
                 <div class="secondPart-gridItem work1Pic">
                     <img class="workImages" src="img/livianLaptop .png" alt="">
@@ -137,7 +157,7 @@
                 <div class="trans"></div>
                 <div class="review1">
                     <div class="reviewName">Rober</div>
-                    <div id="reviewText1" class="reviewText">Mars made a beautiful website for me which i needed for my business. Now i can sell my product from my own website instead of needing a third party company. He was good to work with and happy to help me with new ideas (it was also nice that he speaks my first language, dutch)</div>
+                    <div id="reviewText1" class="reviewText">Mars Prins; made a beautiful website for me which I needed for my business. Now I can sell my product from my own website instead of needing a third party company. They were good to work with and happy to help me with new ideas (it was also nice that they speak my first language, dutch)</div>
                     <div class="reviewStars">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -148,7 +168,7 @@
                 </div>
                 <div class="review2">
                     <div class="reviewName">Lotte</div>
-                    <div id="reviewText2" class="reviewText">I got an idea for a website but i then realized, that i can't actually make a website. So i contacted Mars to execute my idea, he helped me with the finishing touches and delivered a good looking and working website. i'm very happy with the outcome.</div>
+                    <div id="reviewText2" class="reviewText">I got an idea for a website but I then realized, that I can't actually make a website. So i contacted Mars Prins; to execute my idea, they helped me with the finishing touches and delivered a good looking and working website. i'm very happy with the outcome.</div>
                     <div class="reviewStars">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -159,16 +179,71 @@
                 </div>
             </div>
         </div>
+        <div class="fifthPart" id="fifthPart">
+            <div class="fifthPartContainer">
+                <h2 id="fifthPartHead" class="fifthPartHead">Packages</h2>
+                <div class="cards">
+                    <div class="productCard PC1">
+                        <h2 id="basicPackage" class="productTitle">Basic Package</h2>
+                        <h1 class="productPrice">€<b class="bigPrice">9</b>.99</h1>
+                        <ul class="productList">
+                            <li id="li1"><i class="fa-solid fa-circle-check"></i>1 page</li>
+                            <li id="li2"><i class="fa-solid fa-circle-check"></i>Cheap</li>
+                            <li id="li3"><i class="fa-solid fa-circle-xmark"></i>Not interactive</li>
+                            <li id="li4"><i class="fa-solid fa-circle-xmark"></i>No custom content</li>
+                            <li id="li5"><i class="fa-solid fa-circle-xmark"></i>Not responsive</li>
+                        </ul>
+                    </div>
+                    <div class="productCard PC2">
+                        <h2 id="standardPackage" class="productTitle">Standard Package</h2>
+                        <h1 class="productPrice">€<b class="bigPrice">29</b>.99</h1>
+                        <ul class="productList">
+                            <li id="li6"><i class="fa-solid fa-circle-check"></i>3 pages</li>
+                            <li id="li7"><i class="fa-solid fa-circle-check"></i>Interactive</li>
+                            <li id="li8"><i class="fa-solid fa-circle-check"></i>Custom content</li>
+                            <li id="li9"><i class="fa-solid fa-circle-check"></i>Responsive</li>
+                            <li id="li10"><i class="fa-solid fa-circle-check"></i>Save data locally</li>
+                            <li id="li11"><i class="fa-solid fa-circle-xmark"></i>No SEO</li>
+                        </ul>
+                    </div>
+                    <!-- <div class="productCard PC3">
+                        <h2 id="premiumPackage" class="productTitle">Premium Package</h2>
+                        <h1 class="productPrice">€<b class="bigPrice">59</b>.99</h1>
+                        <ul class="productList">
+                            <li id="li12"><i class="fa-solid fa-circle-check"></i>4 pages</li>
+                            <li id="li13"><i class="fa-solid fa-circle-check"></i>Help with design</li>
+                            <li id="li14"><i class="fa-solid fa-circle-check"></i>SEO</li>
+                            <li id="li15"><i class="fa-solid fa-circle-check"></i>Animations</li>
+                            <li id="li16"><i class="fa-solid fa-circle-xmark"></i>Not anything you want</li>
+                        </ul>
+                    </div> -->
+                    <div class="productCard PC4">
+                        <h2 id="customPackage" class="productTitle">Custom Package</h2>
+                        <h1 class="productPrice">€<b class="bigPrice">9</b>.99 <b class="bigPrice">+</b></h1>
+                        <div class="bestDeal"><h2>Best Deal</h2></div>
+                        <ul class="productList">
+                            <li id="li17"><i class="fa-solid fa-circle-check"></i>Unlimited pages</li>
+                            <li id="li18"><i class="fa-solid fa-circle-check"></i>You decide</li>
+                            <li id="li19"><i class="fa-solid fa-circle-check"></i>Anything you want</li>
+                        </ul>
+                    </div>
+                </div>
+                <p id="deliveryTime" class="deliveryTime">Delivery time depends on the difficulty of the task</p>
+            </div>
+        </div>
         <div class="fourthPart" id="fourthPart">
             <div class="fourthPartContainer">
                 <h2 class="contactHead">Contact</h2>
                 <div class="formContainer">
                     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){
                         window.location='index.html'; document.querySelector('.succesfully').classList.add('active');} else {document.querySelector('.succesfully').classList.remove('active');}"></iframe>
-                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdAYKd2dMClVaLgKl0UpNP51JIKndMx22pDnN5t_RFIXoIHOw/formResponse" class="contact" method="POST" target="hidden_iframe" onsubmit="submitted=true">
-                        <input required id="fullName" type="text" name="entry.1951229376" class="name" placeholder="Full Name...">
-                        <input required type="email" name="entry.1085141388" id="" class="email" placeholder="Email...">
-                        <textarea required name="entry.552126823" id="text" cols="30" rows="10" class="text" placeholder="Message.."></textarea>
+                    
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf0fyQzpj8Pz4-retwZx8JU-m1upTdlNT6KH2w8p46SpkH31Q/formResponse" class="contact" method="POST" target="hidden_iframe" onsubmit="submitted=true">
+                        <input required id="fullName" type="text" name="entry.539124589" class="name" placeholder="Full Name...">
+                        <input required type="email" name="entry.1448863081" id="" class="email" placeholder="Email...">
+                        <label for="text" id="MessageLabel">What do you need from us  (Tell in detaill)</label>
+                        <textarea required name="entry.1398007828" id="text" cols="30" rows="10" class="text" placeholder="What Do You Need..."></textarea>
+                        <input type="text" name="entry.2071493093" id="discountCode" class="codeSubmit" placeholder="Discount Code...">
                         <input id="submit" class="submit" type="submit" value="Submit">
                     </form>
                 </div>
