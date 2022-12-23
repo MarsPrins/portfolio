@@ -279,6 +279,17 @@ body {
   }
 }
 
+@media only screen and (min-height: 650px) {
+  .landNav {
+    top: 30%;
+  }
+}
+@media only screen and (max-height: 650px) {
+  .landNav {
+    top: 40%;
+  }
+}
+
 @media only screen and (max-width: 1299px) {
   .fifthPart {
     margin-top: 0;
@@ -419,7 +430,7 @@ body {
   text-decoration: underline;
 }
 
-.fa-x {
+.faax {
   position: absolute;
   right: 40px;
   top: 30px;
@@ -468,17 +479,32 @@ body {
 }
 
 .markSpan {
-  padding: 20px;
-  font-size: 20px;
   visibility: hidden;
   position: absolute;
-  bottom: 80px;
-  left: -50px;
-  width: 20vw;
-  background-color: rgba(255, 117, 117, 0.716);
+  z-index: 2;
+  min-width: 180px;
+  color: var(--txtBlack);
+  background-color: var(--bgCloudTrans);
+  font-family: var(--mainFont);
+  font-size: 15px;
+  border-radius: 1px;
+  padding: 5px;
+  border: solid 1px var(--lineCloud);
+  top: -68px;
+  left: -50%;
 }
 
-
+.markSpan::before {
+  content: "";
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: var(--bgCloudTrans);
+  padding: 6px;
+  z-index: 1;
+  top: 85%;
+  left: 10%;
+  border: var(--lineCloud);
+}
 
 .succesfully {
   width: 100vw;
@@ -516,7 +542,7 @@ body {
 .landingPart{
     margin-top: -1px;
     width: 100%;
-    height: 100%;
+    height: 1000px;
     position: relative;
     color: var(--txtBlack);
     transition: 2s cubic-bezier(0.58,-0.04, 0.21, 1);
@@ -618,7 +644,7 @@ body {
 
 .landNav {
     position: fixed;
-    top: 30%;
+    /* top: 30%; */
     left: 8%;
 }
 
@@ -847,7 +873,7 @@ body {
 .firstPart {
   z-index: 99;
     width: 100%;
-    height: 100vh;
+    height: 1080px;
     background-color: var(--bgCloud);
     position: relative;
     top: -1px;
@@ -1264,7 +1290,7 @@ var {
 .secondPartContainer {
   display: grid;
   grid-auto-rows: minmax(100px, 400px);
-  min-height: 50vh;
+  min-height: 1000px;
   width: 90%;
   margin-left: 5%;
   grid-gap: 2rem;
@@ -1286,11 +1312,10 @@ var {
 }
 
 .myWork {
-  position: absolute;
   font-size: 90px;
-  left: 50%;
-  translate: -50%;
+  text-align: center;
   color: var(--txtBlack);
+  margin-bottom: 100px;
 }
 
 .myWorkP {
@@ -1401,7 +1426,7 @@ var {
 
 .thirdPart {
   width: 100%;
-  height: 80vh;
+  height: 700px;
   position: relative;
   background-image: url(img/review.jpeg);
   background-repeat: no-repeat;
@@ -1485,7 +1510,7 @@ var {
 
 .fourthPart {
   width: 100%;
-  height: 150vh;
+  height: 1500px;
   position: relative;
   background: linear-gradient(to right,var(--bgTrans),var(--bgTrans)),url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
   background-position: center;
@@ -1706,14 +1731,27 @@ var {
   color: var(--txtBlack);
 }
 
+.fa-check {
+  color: rgba(96, 255, 96, 0.8);
+  margin-right: 20px;
+  font-size: 30px;
+}
+
 .fa-circle-check {
   color: rgba(96, 255, 96, 0.8);
   margin-right: 20px;
+  font-size: 30px;
 }
 
-.fa-circle-xmark {
+.fa-yellow {
+  color: rgb(255, 199, 31);;
+  font-size: 30px;
+}
+
+.bad {
   color: rgba(255, 100, 100, 0.8);
   margin-right: 20px;
+  margin-left: 5px;
 }
 
 .PC4 {
@@ -1742,4 +1780,36 @@ var {
   margin-top: 2px;
   font-family: var(--mainFont);
   color: var(--txtBlack);
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  min-width: 180px;
+  color: var(--txtBlack);
+  background-color: var(--bgCloudTrans);
+  font-family: var(--mainFont);
+  font-size: 15px;
+  border-radius: 1px;
+  padding: 5px;
+  border: solid 1px var(--lineCloud);
+  top: -40px;
+  left: -50%;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: var(--bgCloudTrans);
+  padding: 6px;
+  z-index: 1;
+  top: 80%;
+  left: 10%;
+  border: var(--lineCloud);
+}
+
+.mark:hover .tooltip {
+  visibility: visible;
 }
