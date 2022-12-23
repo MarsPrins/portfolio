@@ -210,26 +210,28 @@ var language = {
     dealButt: 'Krijg mijn 30% KORTING!',
     dealDenie: 'Nee bedankt, ik betaal liever de hele prijs',
     discountHead: 'KRIJG TOT 30% KORTING<b class="mark">* <span class="markSpan">10% off from €15, 30% off from €30 op uw eerste bestelling</span></b> met code <b class="discountCode">XMAS</b>',
-    li1: '<i class="fa-solid fa-circle-check"></i>1 pagina',
-    li2: '<i class="fa-solid fa-circle-check"></i>Goedkoop',
-    li3: '<i class="fa-solid fa-circle-xmark"></i>Niet Interactief',
-    li4: '<i class="fa-solid fa-circle-xmark"></i>Geen custom content',
-    li5: '<i class="fa-solid fa-circle-xmark"></i>Niet responsive',
-    li6: "<i class='fa-solid fa-circle-check'></i>3 pagina's",
-    li7: '<i class="fa-solid fa-circle-check"></i>Interactief',
-    li8: '<i class="fa-solid fa-circle-check"></i>Custom content',
-    li9: '<i class="fa-solid fa-circle-check"></i>Responsive',
-    li10: '<i class="fa-solid fa-circle-check"></i>Data lokaal opslaan',
-    li11: '<i class="fa-solid fa-circle-xmark"></i>Geen SEO',
-    li17: "<i class='fa-solid fa-circle-check'></i>Oneindige pagina's",
-    li18: '<i class="fa-solid fa-circle-check"></i>U kiest',
-    li19: '<i class="fa-solid fa-circle-check"></i>Alles wat u wil',
+    li1: '<i class="fa-solid fa-yellow fa-check"></i>1 pagina',
+    li2: '<i class="fa-solid fa-check"></i>Goedkoop',
+    li3: '<i class="fa-solid bad fa-x"></i>Niet Interactief',
+    li4: '<i class="fa-solid bad fa-x"></i>Geen custom content',
+    li5: '<i class="fa-solid bad fa-x"></i>Niet responsive',
+    li6: "<i class='fa-solid fa-yellow fa-check'></i>3 pagina's",
+    li7: '<i class="fa-solid fa-check"></i>Interactief',
+    li8: '<i class="fa-solid fa-check"></i>Custom content',
+    li9: '<i class="fa-solid fa-yellow fa-check"></i>Responsive',
+    li10: '<i class="fa-solid fa-yellow fa-check"></i>Data lokaal opslaan',
+    li11: '<i class="fa-solid bad fa-x"></i>Geen SEO',
+    li17: "<i class='fa-solid fa-check'></i>Oneindige pagina's",
+    li18: '<i class="fa-solid fa-check"></i>U kiest',
+    li19: '<i class="fa-solid fa-check"></i>Alles wat u wil',
+    li20: '<i class="fa-solid fa-check"></i>Alles van de andere pakketten',
     basicPack: 'Basis Pakket',
     standardPack: 'Standaard Pakket',
     customPack: 'Custom Pakket',
     fifthPartHead: 'Pakket',
     deliveryTime: 'Aflever tijd kan verschillen met de moeilijkheid van de taak',
     messageLabel: 'Wat heb je van ons nodig (Vertel in detaill)',
+    tooltip: 'Prijs ligt aan de taak',
   }
 };
 
@@ -280,12 +282,14 @@ if (window.location.hash) {
     li17.innerHTML = language.ned.li17;
     li18.innerHTML = language.ned.li18;
     li19.innerHTML = language.ned.li19;
+    li20.innerHTML = language.ned.li20;
     basicPackage.textContent = language.ned.basicPack;
     standardPackage.textContent = language.ned.standardPack;
     customPackage.textContent = language.ned.customPack;
     fifthPartHead.textContent = language.ned.fifthPartHead;
     deliveryTime.textContent = language.ned.deliveryTime;
     MessageLabel.textContent = language.ned.messageLabel;
+    tooltip.textContent = language.ned.tooltip
   }
   if (window.location.hash === "#eng") {
     english()
