@@ -2,6 +2,17 @@ function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
 
+const faviconTag = document.getElementById("faviconTag");
+const isDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+const changeFavicon = () => {
+  if (isDark.matches) faviconTag.href = "img/favicon.png";
+  else faviconTag.href = "img/favicon-light.png";
+};
+
+changeFavicon();
+
+setInterval(changeFavicon, 1000);
 
 var submitted = false;
 
@@ -198,8 +209,8 @@ var language = {
     fiverrBottomPara: 'Alternatief, Kunt u ons berichten op <a href="https://www.fiverr.com/share/EormkD" target="_blank">Fiverr</a>',
     myWork: 'Ons Werk',
     workParagraph1: 'Een website voor de startende producer <strong>Livian Beats</strong> voor hem om zijn muziek te uploaden en te verkopen voor het publiek',
-    reviewText1: 'Mars Prins; heeft een prachtige website gemaakt voor mij die ik nodig had voor mijn business. Nu kan ik mijn product verkopen vanaf mijn eigen website in plaats van van een dere partij bedrijf. Zij waren goed om mee te werken en blij om mij te helpen met nieuwe ideeën (het was ook fijn dat zij mijn moeder taal spreken, nederlands)',
-    reviewText2: 'Ik had een idee voor een website maar toen bedacht ik me dat ik helemaal geen website kan maken. Dus ik nam contact op met Mars Prins; om mijn idee uit te voeren, zij hielpen mij met de puntjes op de i en leverde een mooie en goed werkende website af. Ik ben heel blij met me uitkomst',
+    reviewText1: 'WebCheek heeft een prachtige website gemaakt voor mij die ik nodig had voor mijn business. Nu kan ik mijn product verkopen vanaf mijn eigen website in plaats van van een dere partij bedrijf. Zij waren goed om mee te werken en blij om mij te helpen met nieuwe ideeën (het was ook fijn dat zij mijn moeder taal spreken, nederlands)',
+    reviewText2: 'Ik had een idee voor een website maar toen bedacht ik me dat ik helemaal geen website kan maken. Dus ik nam contact op met WebCheek om mijn idee uit te voeren, zij hielpen mij met de puntjes op de i en leverde een mooie en goed werkende website af. Ik ben heel blij met me uitkomst',
     fullName: 'Hele naam...',
     text: 'Wat Heb Je Nodig...',
     discountCode: 'Kortings Code...',
@@ -228,7 +239,7 @@ var language = {
     basicPack: 'Basis Pakket',
     standardPack: 'Standaard Pakket',
     customPack: 'Custom Pakket',
-    fifthPartHead: 'Pakket',
+    fifthPartHead: 'Pakketten',
     deliveryTime: 'Aflever tijd kan verschillen met de moeilijkheid van de taak',
     messageLabel: 'Wat heb je van ons nodig (Vertel in detaill)',
     tooltip: 'Prijs ligt aan de taak',
