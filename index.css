@@ -6,7 +6,7 @@
     --txtBlack: rgb(61, 61, 61); */
     --bg1: #dafdff;
     --bg: #c5fbff;
-    --bgTrans: #c5fbffcc;
+    --bgTrans: #c4fbffcc;
     --bg2: #a7d8da;
     --bg1Cloud: #eee6dc;
     --bgCloud: #e0d6ca;
@@ -30,7 +30,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x:hidden;
     overflow-y: scroll;
     margin: 0;
 }
@@ -1787,6 +1787,7 @@ var {
   color: var(--txtBlack);
 }
 
+.tooltip2 ,
 .tooltip {
   visibility: hidden;
   position: absolute;
@@ -1803,6 +1804,7 @@ var {
   left: -50%;
 }
 
+.tooltip2::before ,
 .tooltip::before {
   content: "";
   position: absolute;
@@ -1815,6 +1817,7 @@ var {
   border: var(--lineCloud);
 }
 
-.mark:hover .tooltip {
+.mark:hover .tooltip,
+.mark:hover .tooltip2 {
   visibility: visible;
 }

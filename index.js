@@ -17,6 +17,12 @@ setInterval(changeFavicon, 1000);
 var submitted = false;
 
 
+if (localStorage.getItem('d1u2t3c4h5?') == 'y1e2s') {
+  location.hash = '#ned'
+  localStorage.setItem('d1u2t3c4h5?', 'n1o')
+}
+
+
 var togglebtn = document.querySelector('.toggle-btn');
 function headnav1() {
   document.querySelector('.firstPart').scrollIntoView()
@@ -186,7 +192,7 @@ var phone = document.getElementsByClassName('phone');
 
 
 function contact() {
-  document.getElementById('firstPart').scrollIntoView();
+  document.getElementById('fourthPart').scrollIntoView();
 }
 
 function fiverr() {
@@ -233,8 +239,8 @@ var language = {
     li10: '<i class="fa-solid fa-yellow fa-check"></i>Data lokaal opslaan',
     li11: '<i class="fa-solid bad fa-x"></i>Geen SEO',
     li17: "<i class='fa-solid fa-check'></i>Oneindige pagina's",
-    li18: '<i class="fa-solid fa-check"></i>U kiest',
-    li19: '<i class="fa-solid fa-check"></i>Alles wat u wil',
+    li18: '<i class="fa-solid fa-check"></i>Domein + Hosting',
+    li19: "<i class='fa-solid fa-check'></i>Anything you want<b class='mark'>*<span id='tooltip2' class='tooltip2'>As long as it's to our expertise</span></b>",
     li20: '<i class="fa-solid fa-check"></i>Alles van de andere pakketten',
     basicPack: 'Basis Pakket',
     standardPack: 'Standaard Pakket',
@@ -243,6 +249,7 @@ var language = {
     deliveryTime: 'Aflever tijd kan verschillen met de moeilijkheid van de taak',
     messageLabel: 'Wat heb je van ons nodig (Vertel in detaill)',
     tooltip: 'Prijs ligt aan de taak',
+    tooltip2: 'Zolang het in ons skillvak valt',
   }
 };
 
@@ -300,45 +307,13 @@ if (window.location.hash) {
     fifthPartHead.textContent = language.ned.fifthPartHead;
     deliveryTime.textContent = language.ned.deliveryTime;
     MessageLabel.textContent = language.ned.messageLabel;
-    tooltip.textContent = language.ned.tooltip
+    tooltip.textContent = language.ned.tooltip;
+    tooltip2.textContent = language.ned.tooltip2;
   }
   if (window.location.hash === "#eng") {
     english()
   } 
 }
-
-// if (localstorage.getItem('wanted-language') == 'nederlands') {
-  
-// }
-
-
-function setCookie(c_name, value, exdays) {
-  var exdate = new Date();
-  exdate.setDate(exdate.getDate() + exdays);
-  var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
-  document.cookie = c_name + "=" + c_value;
-}
-
-function getCookie(c_name) {
-  var c_value = document.cookie;
-  var c_start = c_value.indexOf(" " + c_name + "=");
-  if (c_start == -1) {
-    c_start = c_value.indexOf(c_name + "=");
-  }
-  if (c_start == -1) {
-    c_value = null;
-  } else {
-    c_start = c_value.indexOf("=", c_start) + 1;
-    var c_end = c_value.indexOf(";", c_start);
-    if (c_end == -1) {
-      c_end = c_value.length;
-    }
-    c_value = unescape(c_value.substring(c_start, c_end));
-  }
-  return c_value;
-}
-
-
 
 var faX = document.querySelector('.fa-x');
 var faax = document.querySelector('.fax');
@@ -362,6 +337,7 @@ function closeDeal() {
 }
 function openDeal() {
   dealBG.classList.add('shown')
+  closeSmallDeal()
 }
 function openSmallDeal() {
   discountSmall.classList.remove('hidden')
@@ -374,18 +350,9 @@ function closeSmallDeal() {
   discountSmall.classList.add('hidden')
 }
 
-checkSession();
-
-function checkSession() {
-  var c = getCookie("visited");
-  if (c === "yes") {
-    openSmallDeal()
-  } else {
-    setCookie("visited", "yes", 1);
-    openDeal()
-    closeSmallDeal()
-  }
-}
+setInterval(() => {
+  openDeal()  
+}, 1000 * 60 * 60 * 5);
 
 
 var ms = document.querySelector('.text')
