@@ -180,16 +180,13 @@ setInterval(() => {
   }
 
   doSomething()
-var phone = document.getElementsByClassName('phone');
-  if (screen.width < 500) {
-    phone[0].classList.add('active');
-    document.body.style.position = "fixed"
-  } else {
-    phone[0].classList.remove('active');
-    document.body.style.position = "relative"
-  }
 }, 10);
 
+setInterval(() => {
+  if (screen.width < 500) {
+    window.location = "phone/index.html";
+  }
+}, 1000);
 
 function contact() {
   document.getElementById('fourthPart').scrollIntoView();
@@ -221,7 +218,6 @@ var language = {
     text: 'Wat Heb Je Nodig...',
     discountCode: 'Kortings Code...',
     submit: 'Opsturen',
-    phoneHead: 'Sorry, deze website is nog niet beschikbaar op telefoons...<br/> Open de link op een computer, laptop of tablet',
     dealHead: '<strong class="sale">30% KORTING<b class="mark">* <span class="markSpan">10% korting vanaf €15, 30% korting vanaf €30 op uw eerste bestelling</span></b></strong>',
     dealP: 'Wanneer u de code hieronder gebruikt...',
     dealButt: 'Krijg mijn 30% KORTING!',
@@ -280,7 +276,6 @@ if (window.location.hash) {
     text.placeholder = language.ned.text;
     discountCode.placeholder = language.ned.discountCode;
     submit.value = language.ned.submit;
-    phoneHead.innerHTML = language.ned.phoneHead;
     dealHead.innerHTML = language.ned.dealHead;
     dealP.textContent = language.ned.dealP;
     dealButt.innerText = language.ned.dealButt;
@@ -329,7 +324,7 @@ faax.addEventListener('click', closeSmallDeal)
 dealButton.addEventListener('click', scrollDown)
 denieButt.addEventListener('click', closeDeal)
 
-
+// openDeal()
 
 function closeDeal() {
   dealBG.classList.remove('shown')
@@ -350,9 +345,36 @@ function closeSmallDeal() {
   discountSmall.classList.add('hidden')
 }
 
-setInterval(() => {
-  openDeal()  
-}, 1000 * 60 * 60 * 5);
+
+// if (localStorage.getItem('hour')) {
+  
+// }
+
+// var countDownDate = new Date().getTime() + 1000 * 60 * 60;
+// // Update the count down every 1 second
+// var x = setInterval(function() {
+
+//   // Get today's date and time
+//   var now = new Date().getTime();
+
+//   // Find the distance between now and the count down date
+//   var distance = countDownDate - now;
+
+//   // Time calculations for days, hours, minutes and seconds
+//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+//   // Display the result in the element with id="demo"
+//   document.getElementById("discountHead").innerHTML = hours + "h "
+//   + minutes + "m " + seconds + "s ";
+
+//   // If the count down is finished, write some text
+//   if (distance <= 0) {
+//     clearInterval(x);
+//     console.log('done')
+//   }
+// }, 1000);
 
 
 var ms = document.querySelector('.text')
