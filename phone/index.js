@@ -117,18 +117,19 @@ function delay(time) {
   
     if (lastKnownScrollPosition > 550) {
       firstTitle[0].classList.add("active");
-      firstFiverrTop[0].classList.add("active");
-      firstFiverrBottom[0].classList.add("active");
     } else {
       firstTitle[0].classList.remove("active");
-      firstFiverrTop[0].classList.remove("active");
-      firstFiverrBottom[0].classList.remove("active");
     }  
-    if (lastKnownScrollPosition > 800) {
+    if (lastKnownScrollPosition > 980) {
       firstText[0].classList.add("active");
     } else {
       firstText[0].classList.remove("active");
     }
+    if (lastKnownScrollPosition > 1250) {
+      firstFiverrTop[0].classList.add("active");
+    } else {
+      firstFiverrTop[0].classList.remove("active");
+    } 
     if (lastKnownScrollPosition > 1683) {
       document.querySelector('.fiverrTopP').classList.add('hovered')
       document.querySelector('.fiverrTopH2Contain').classList.add('hovered')
@@ -139,6 +140,26 @@ function delay(time) {
       document.querySelector('.fiverrTopH2Contain').classList.remove('hovered')
       document.querySelector('.fa-paper-plane').classList.remove('hovered')
       document.querySelector('.fiverrTopP').classList.remove('hovered')
+    } 
+    if (lastKnownScrollPosition > 1750) {
+      firstFiverrBottom[0].classList.add("active");
+    } else {
+      firstFiverrBottom[0].classList.remove("active");
+    }
+    if (lastKnownScrollPosition > 2100) {
+      document.querySelector('.myWork').classList.add('active')
+    } else {
+      document.querySelector('.myWork').classList.remove('active')
+    }
+    if (lastKnownScrollPosition > 2300) {
+      document.querySelector('.work1Pic').classList.add('active')
+    } else if(lastKnownScrollPosition < 2100){
+      document.querySelector('.work1Pic').classList.remove('active')
+    }
+    if (lastKnownScrollPosition > 2500) {
+      document.querySelector('.work1Text').classList.add('active')
+    } else if(lastKnownScrollPosition < 2100){
+      document.querySelector('.work1Text').classList.remove('active')
     }
   }
   
@@ -161,19 +182,6 @@ function delay(time) {
   var paperPlane = document.getElementsByClassName("fa-paper-plane");
   
   setInterval(() => {
-    var para = document.querySelector('#firstPartTextPara');
-    var h = document.querySelector('#firstPartTextHead');
-    var firstText = document.querySelector('.firstPartText');
-  
-    if (document.querySelector(".firstPartText:active") != null) {
-      para.classList.add('hovered')
-      h.classList.add('hovered')
-      firstText.classList.add('hovered')
-    } else {
-      para.classList.remove('hovered')
-      h.classList.remove('hovered')
-      firstText.classList.remove('hovered')
-    }
   
     doSomething()
   }, 10);

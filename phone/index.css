@@ -21,11 +21,16 @@
     --line: rgb(4, 117, 119);
     --shadow: rgba(37, 37, 37, 0.404);
     
-    --mainFont: 'Raleway', sans-serif;
+    --mainFont: 'gothic', sans-serif;
     --titleFont: 'Arial', sans-serif;
     --boldTitleFont: 'Exo', sans-serif;
     --lobster: 'Lobster', sans-serif;
 
+}
+
+@font-face {
+  font-family: 'gothic';
+  src: URL('../coco-gothic.ultralight.ttf') format('truetype');
 }
 
 html {
@@ -189,7 +194,7 @@ body {
 
 .dealDenie {
   position: relative;
-  top: 50px;
+  top: 80px;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -431,7 +436,7 @@ body {
 }
 
 #landNav1 {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .landNav li a{
@@ -683,7 +688,7 @@ body {
 .firstPartText {
   opacity: 0;
   transform: translatey(200px);
-  transition: .4s;
+  transition: 1s;
 }
 
 .firstInfo {
@@ -703,29 +708,6 @@ body {
   color: var(--txtBlack);
 }
 
-.firstPartText.hovered {
-  background-color: var(--hoverCloud);
-  scale: .95;
-}
-
-#firstPartTextHead {
-  font-size: 60px;
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  translate: -50%;
-  text-align: center;
-  font-family: var(--boldTitleFont);
-  color: var(--txtBlack);
-  transition: 1s;
-}
-
-#firstPartTextHead.hovered {
-  opacity: 0;
-  transform: translatex(1000px);
-  scale: .6;
-}
-
 .firstPartText.active {
   opacity: 1;
   transform: translateY(0);
@@ -737,21 +719,16 @@ body {
   padding: 30px;
   position: absolute;
   font-family: var(--mainFont);
-  transform: translateX(-1000px);
   transition: 1s ease-in-out;
-  scale: .6;
-  opacity: 0;
-}
-
-#firstPartTextPara.hovered {
-  transform: translateX(0);
-  scale: 1;
-  cursor: default;
-  opacity: 1;
 }
 
 .price {
   font-size: 30px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
 }
 
 .firstPartTitle {
@@ -819,7 +796,7 @@ body {
 .firstPartFiverrTop {
   opacity: 0;
   transform: translateX(200px);
-  transition: .4s;
+  transition: 1s;
   z-index: 10;
   background-color: var(--bgCloud);
   cursor: pointer;
@@ -839,7 +816,7 @@ body {
 .firstPartFiverrBottom {
   opacity: 0;
   transform: translateY(600px);
-  transition: .4s;
+  transition: 1s;
   position: relative;
 }
 
@@ -871,7 +848,6 @@ body {
   font-weight: 500;
   padding: 40px;
   text-align: center;
-  transform: translateX(1500px);
   transition: .4s;
 }
 
@@ -881,17 +857,6 @@ body {
   text-decoration: none;
   transition: .4s;
   cursor: pointer;
-}
-
-.fiverrBottomP a:hover {
-  text-decoration:underline;
-}
-
-.firstPartFiverrBottom:active > .fiverrBottomP {
-  transform: translateX(0);
-}
-.firstPartFiverrBottom:hover > .fa-paper-plane {
-  color: rgb(10, 127, 4);
 }
 
 .fiverrTopP {
@@ -924,27 +889,6 @@ body {
   transition: .4s;
   top: 10px;
   font-weight: bold;
-}
-
-@keyframes slideSmall {
-  0% {
-    top: -.2em;
-  }
-  20% {
-    top: -.2em;
-  }
-  40% {
-    top: -1.6em;
-  }
-  60% {
-    top: -2.9em;
-  }
-  80% {
-    top: -4.5em;
-  }
-  100% {
-    top: -.2em;
-  }
 }
 
 @keyframes slide {
@@ -1091,6 +1035,12 @@ var {
   font-size: 50px;
   text-align: center;
   color: var(--txtBlack);
+  transform: translateX(1000px);
+  transition: 1s;
+}
+
+.myWork.active {
+  transform: translateX(0);
 }
 
 .myWorkP {
@@ -1104,6 +1054,12 @@ var {
 
 .work1Pic {
   top: -100px;
+  transform: translateX(-1000px);
+  transition: 1s;
+}
+
+.work1Pic.active {
+  transform: translateX(0);
 }
 
 .workImages,
@@ -1120,6 +1076,12 @@ var {
   border: solid 2px transparent;
   /* height: 300px; */
   top: -100px;
+  transform: translateX(1000px);
+  transition: 1s;
+}
+
+.work1Text.active {
+  transform: translateX(0);
 }
 
 .workHeads {
@@ -1336,7 +1298,7 @@ var {
 }
 
 .contact input::placeholder {
-  font-size: 20px;
+  font-size: 2px;
   font-family: var(--mainFont);
 }
 
@@ -1542,11 +1504,10 @@ var {
 }
 
 .bestDeal {
-  width: 300px;
+  width: 100%;
   height: 40px;
   background-color: #ff5f5f;
   position: absolute;
-  left: -7%;
   top: 0px;
   text-align: center;
   font-size: 18px;

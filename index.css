@@ -21,11 +21,16 @@
     --line: rgb(4, 117, 119);
     --shadow: rgba(37, 37, 37, 0.404);
     
-    --mainFont: 'Raleway', sans-serif;
+    --mainFont: 'gothic', sans-serif;
     --titleFont: 'Arial', sans-serif;
     --boldTitleFont: 'Exo', sans-serif;
     --lobster: 'Lobster', sans-serif;
 
+}
+
+@font-face {
+  font-family: 'gothic';
+  src: URL('coco-gothic.ultralight.ttf') format('truetype');
 }
 
 html {
@@ -232,15 +237,15 @@ body {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-height: 600px) {
   .landTitle {
-    font-size: 60px;
+    top: -100px;
   }
   
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-height: 600px) {
   .landTitle {
-    font-size: 100px;
+    top: 0;
   }
 }
 
@@ -255,12 +260,12 @@ body {
   }
 }
 
-@media only screen and (min-height: 650px) {
+@media only screen and (min-height: 800px) {
   .landNav {
     top: 30%;
   }
 }
-@media only screen and (max-height: 650px) {
+@media only screen and (max-height: 800px) {
   .landNav {
     top: 40%;
   }
@@ -959,6 +964,11 @@ body {
 
 .price {
   font-size: 80px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
 }
 
 .firstPartTitle {
