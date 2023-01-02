@@ -1551,7 +1551,7 @@ var {
 .contact input {
   height: 9%;
   font-size: 18px;
-  font-family: var(--mainFont);
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   color: var(--txtBlack);
 }
@@ -1572,7 +1572,7 @@ var {
 .text {
   height: 40%;
   width: 95%;
-  font-family: var(--mainFont);
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
 }
 

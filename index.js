@@ -150,6 +150,7 @@ var fiverrTopP = document.getElementsByClassName("fiverrTopP");
 var paperPlane = document.getElementsByClassName("fa-paper-plane");
 var me = document.getElementsByClassName("fiverrTopMe")
 
+
 setInterval(() => {
   if (document.querySelector(".firstPartFiverrTop:hover") != null) {
       fiverrTopH2Contain[0].classList.add("hovered");
@@ -178,13 +179,14 @@ setInterval(() => {
     h.classList.remove('hovered')
     firstText.classList.remove('hovered')
   }
-
   doSomething()
+
 }, 10);
+
 
 setInterval(() => {
   if (screen.width < 500) {
-    window.location = "phone/index.html";
+    window.location = "phone";
   }
 }, 1000);
 
@@ -350,31 +352,45 @@ function closeSmallDeal() {
   
 // }
 
-// var countDownDate = new Date().getTime() + 1000 * 60 * 60;
-// // Update the count down every 1 second
-// var x = setInterval(function() {
 
-//   // Get today's date and time
-//   var now = new Date().getTime();
 
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
 
-//   // Time calculations for days, hours, minutes and seconds
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-//   // Display the result in the element with id="demo"
-//   document.getElementById("discountHead").innerHTML = hours + "h "
-//   + minutes + "m " + seconds + "s ";
+// if (localStorage.getItem('AMOPOST') >= '1111') {
+//   alert('calm down there')
+//   delay(5000).then(() => 
+//   localStorage.setItem('AMOPOST', '1'))
+// }
 
-//   // If the count down is finished, write some text
-//   if (distance <= 0) {
-//     clearInterval(x);
-//     console.log('done')
+// if (localStorage.getItem('AMOPOST') = '11') {
+//   if (!localStorage.getItem('date')) {
+//     var countDownDate = new Date().getTime() + 1000 * 60 * 10;
+//     localStorage.setItem('date', countDownDate)
 //   }
-// }, 1000);
+  
+  
+//   var x = setInterval(function() {
+//     var downDate = Number(localStorage.getItem('date'))
+  
+//     var now = new Date().getTime();
+  
+//     var distance = downDate - now;
+  
+//     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+//     document.getElementById("discountHead").innerHTML = hours + "h "
+//     + minutes + "m " + seconds + "s ";
+  
+  
+//     if (distance <= 0) {
+//       clearInterval(x);
+//       alert('done')
+//       localStorage.removeItem('date')
+//     }
+//   }, 1000);
+// }
 
 
 var ms = document.querySelector('.text')

@@ -188,7 +188,7 @@ function delay(time) {
   
   setInterval(() => {
     if (screen.width > 500) {
-        window.location = "../index.html";
+        window.location = "../";
     }
   }, 1000);
 
@@ -210,7 +210,6 @@ function delay(time) {
       landNav3: 'Persoonlijke Reviews',
       landNav5: 'Pakketten',
       firstPartTextPara: 'Wij zullen u helpen met uw website ideeën en zal ze uitvoeren als het mogelijk is! <br/> Wij zullen voor u en uw bedrijf een website maken vanaf maar <strong class="price">€9</strong><strong>.99!</strong>',
-      firstPartTextHead: 'Klik & houden',
       fiverrTopH2: ' Contact <br/><var>Bericht <br/>Benader <br/>Werk Met </var>',
       fiverrTopParagraph: "Contact ons over wat u van plan bent en dan zullen we u zo snel mogelijk terug mailen over <strong>wat wij voor u kunnen beteken!</strong> Weet u nog niet zeker wat u gedaan wil hebben?<strong> Wij helpen u!</strong>",
       fiverrBottomPara: 'Alternatief, Kunt u ons berichten op <a href="https://www.fiverr.com/share/EormkD" target="_blank">Fiverr</a>',
@@ -247,7 +246,7 @@ function delay(time) {
       customPack: 'Custom Pakket',
       fifthPartHead: 'Pakketten',
       deliveryTime: 'Aflever tijd kan verschillen met de moeilijkheid van de taak',
-      messageLabel: 'Wat heb je van ons nodig (Vertel in detaill)',
+      messageLabel: 'Wat heb je van ons nodig (Vertel in detail)',
       tooltip: 'Prijs ligt aan de taak',
       tooltip2: 'Zolang het in ons skillvak valt',
     }
@@ -265,7 +264,6 @@ function delay(time) {
       headNav5.textContent = language.ned.landNav5;
       landNav5.textContent = language.ned.landNav5;
       firstPartTextPara.innerHTML = language.ned.firstPartTextPara;
-      firstPartTextHead.textContent = language.ned.firstPartTextHead;
       firstTitle1.textContent = language.ned.landNav1 + ";";
       firstTitle2.textContent = language.ned.landNav1 + ";";
       fiverrTopH2.innerHTML = language.ned.fiverrTopH2;

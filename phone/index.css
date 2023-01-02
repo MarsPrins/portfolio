@@ -21,7 +21,7 @@
     --line: rgb(4, 117, 119);
     --shadow: rgba(37, 37, 37, 0.404);
     
-    --mainFont: 'gothic', sans-serif;
+    --mainFont: 'Arial', sans-serif;
     --titleFont: 'Arial', sans-serif;
     --boldTitleFont: 'Exo', sans-serif;
     --lobster: 'Lobster', sans-serif;
@@ -183,7 +183,6 @@ body {
   background: var(--bg);
   font-size: 30px;
   font-family: var(--boldTitleFont);
-  letter-spacing: 5px;
   color: var(--txtBlack);
   transition: .4s;
 }
@@ -241,6 +240,7 @@ body {
   font-family: var(--mainFont);
   cursor: pointer;
   position: relative;
+  z-index: 999;
 }
 
 .mark:active .markSpan {
@@ -259,7 +259,7 @@ body {
   border-radius: 1px;
   padding: 5px;
   border: solid 1px var(--lineCloud);
-  top: 30px;
+  top: -100px;
   left: -100px;
 }
 
@@ -447,7 +447,7 @@ body {
     text-decoration: none;
     color: var(--txtBlack);
     font-family: var(--mainFont);
-    font-weight: 600;
+    font-weight: 200;
     font-size: 25px;
     transition: .4s;
     position: relative;
@@ -723,12 +723,13 @@ body {
 }
 
 .price {
-  font-size: 30px;
-  font-family: 'Raleway', sans-serif;
+  font-size: 1.9rem;
+  font-family: var(--mainFont);
 }
 
 .raleway {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--mainFont);
+  font-size: 1.6rem;
 }
 
 .firstPartTitle {
@@ -757,7 +758,7 @@ body {
   position: absolute;
 }
 
-.firstPartTitle:hover > .firstPartTitleContainer{
+.firstPartTitle:is(:hover, :active) > .firstPartTitleContainer{
   animation-play-state: paused;
 }
 
@@ -1095,7 +1096,6 @@ var {
 .work1Text p {
   position: relative;
   font-family: var(--mainFont);
-  font-weight: 600;
   font-size: 18px;
   text-align: center;
   top: 5%;
@@ -1271,7 +1271,7 @@ var {
   left: 50%;
   top: 50%;
   translate: -50% -50%;
-  width: 97%;
+  width: 90%;
   height: 900px;
 }
 
@@ -1291,14 +1291,13 @@ var {
 
 .contact input {
   height: 9%;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-family: var(--mainFont);
-  font-weight: 800;
   color: var(--txtBlack);
 }
 
 .contact input::placeholder {
-  font-size: 2px;
+  font-size: 20px;
   font-family: var(--mainFont);
 }
 
@@ -1312,9 +1311,8 @@ var {
 
 .text {
   height: 40%;
-  width: 95%;
+  width: 88%;
   font-family: var(--mainFont);
-  font-weight: 700;
   margin-top: 30px;
 }
 
@@ -1355,6 +1353,7 @@ var {
 
 .codeSubmit {
   text-transform: uppercase;
+  width: 60%;
 }
 
 .codeSubmit::placeholder {
@@ -1366,7 +1365,6 @@ var {
   font-family: var(--mainFont);
   position: relative;
   bottom: 10px;
-  font-weight: 800;
   color: var(--txtBlack);
   opacity: .6;
   top: 15px;
@@ -1523,8 +1521,7 @@ var {
 .tooltip {
   visibility: hidden;
   position: absolute;
-  z-index: 2;
-  min-width: 180px;
+  min-width: 100px;
   color: var(--txtBlack);
   background-color: var(--bgCloudTrans);
   font-family: var(--mainFont);
@@ -1534,9 +1531,15 @@ var {
   border: solid 1px var(--lineCloud);
   top: -40px;
   left: -50%;
+  z-index: 999;
 }
 
-.tooltip2::before ,
+.tooltip2 {
+  top: -80px;
+  font-size: 20px;
+  min-width: 180px;
+}
+
 .tooltip::before {
   content: "";
   position: absolute;
@@ -1549,7 +1552,7 @@ var {
   border: var(--lineCloud);
 }
 
-.mark:hover .tooltip,
-.mark:hover .tooltip2 {
+.mark:active .tooltip,
+.mark:active .tooltip2 {
   visibility: visible;
 }
