@@ -83,16 +83,18 @@ body {
     position: fixed;
     left: 5%;
     top: 9%;
+    z-index: 9999;
 }
 
 .arrow {
     position: fixed;
     font-size: 100px;
     color: var(--txt);
+    z-index: 9999;
 }
 
 .fa-arrow-left-long {
-    z-index: 999;
+    z-index: 9999;
     cursor: pointer;
 }
 
