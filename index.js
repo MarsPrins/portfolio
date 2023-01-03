@@ -148,7 +148,6 @@ var fiverrTopH2Contain = document.getElementsByClassName("fiverrTopH2Contain");
 var fiverrH2 = document.getElementsByClassName("fiverrTopH2");
 var fiverrTopP = document.getElementsByClassName("fiverrTopP");
 var paperPlane = document.getElementsByClassName("fa-paper-plane");
-var me = document.getElementsByClassName("fiverrTopMe")
 
 
 setInterval(() => {
@@ -157,13 +156,11 @@ setInterval(() => {
       fiverrH2[0].classList.add("hovered");
       fiverrTopP[0].classList.add("hovered");
       paperPlane[0].classList.add("hovered");
-      me[0].classList.add('hovered')
   } else {
     fiverrTopH2Contain[0].classList.remove("hovered");
     fiverrH2[0].classList.remove("hovered");
     fiverrTopP[0].classList.remove("hovered");
     paperPlane[0].classList.remove("hovered");
-    me[0].classList.remove('hovered')
   }
 
   var para = document.querySelector('#firstPartTextPara');
@@ -203,18 +200,17 @@ var dataReload = document.querySelectorAll("[data-reload]");
 
 var language = {
   ned: {
-    landNav1: 'Wat Wij Voor U Zullen Doen',
+    landNav1: 'Wat Wij Voor U Gaan Doen',
     landNav2: 'Ons Werk',
     landNav3: 'Persoonlijke Reviews',
     landNav5: 'Pakketten',
-    firstPartTextPara: 'Wij zullen u helpen met uw website ideeën en zal ze uitvoeren als het mogelijk is! <br/> Wij zullen voor u en uw bedrijf een website maken vanaf maar <strong class="price">€9</strong><strong>.99!</strong>',
+    firstPartTextPara: 'Wij gaan u helpen met uw website ideeën en zal ze uitvoeren als het mogelijk is! <br/> Wij gaan voor u en uw bedrijf een website maken vanaf maar <strong class="price">€9</strong><small class="raleway">.99!</small>',
     fiverrTopH2: ' Contact <br/><var>Bericht <br/>Benader <br/>Werk Met </var>',
-    fiverrTopMe: 'Ons!',
     fiverrTopParagraph: "Contact ons over wat u van plan bent en dan zullen we u zo snel mogelijk terug mailen over <strong>wat wij voor u kunnen beteken!</strong> Weet u nog niet zeker wat u gedaan wil hebben?<strong> Wij helpen u!</strong>",
     fiverrBottomPara: 'Alternatief, Kunt u ons berichten op <a href="https://www.fiverr.com/share/EormkD" target="_blank">Fiverr</a>',
     myWork: 'Ons Werk',
     workParagraph1: 'Een website voor de startende producer <strong>Livian Beats</strong> voor hem om zijn muziek te uploaden en te verkopen voor het publiek',
-    reviewText1: 'WebCheek heeft een prachtige website gemaakt voor mij die ik nodig had voor mijn business. Nu kan ik mijn product verkopen vanaf mijn eigen website in plaats van van een dere partij bedrijf. Zij waren goed om mee te werken en blij om mij te helpen met nieuwe ideeën (het was ook fijn dat zij mijn moeder taal spreken, nederlands)',
+    reviewText1: 'WebCheek heeft een prachtige website gemaakt voor mij die ik nodig had voor mijn business. Nu kan ik mijn product verkopen vanaf mijn eigen website in plaats van van een derde partij bedrijf. Zij waren goed om mee te werken en blij om mij te helpen met nieuwe ideeën (het was ook fijn dat zij mijn moeder taal spreken, nederlands)',
     reviewText2: 'Ik had een idee voor een website maar toen bedacht ik me dat ik helemaal geen website kan maken. Dus ik nam contact op met WebCheek om mijn idee uit te voeren, zij hielpen mij met de puntjes op de i en leverde een mooie en goed werkende website af. Ik ben heel blij met me uitkomst',
     fullName: 'Hele naam...',
     text: 'Wat Heb Je Nodig...',
@@ -238,7 +234,7 @@ var language = {
     li11: '<i class="fa-solid bad fa-x"></i>Geen SEO',
     li17: "<i class='fa-solid fa-check'></i>Oneindige pagina's",
     li18: '<i class="fa-solid fa-check"></i>Domein + Hosting',
-    li19: "<i class='fa-solid fa-check'></i>Anything you want<b class='mark'>*<span id='tooltip2' class='tooltip2'>As long as it's to our expertise</span></b>",
+    li19: "<i class='fa-solid fa-check'></i>Alles wat u wilt<b class='mark'>*<span id='tooltip2' class='tooltip2'>As long as it's to our expertise</span></b>",
     li20: '<i class="fa-solid fa-check"></i>Alles van de andere pakketten',
     basicPack: 'Basis Pakket',
     standardPack: 'Standaard Pakket',
@@ -266,7 +262,6 @@ if (window.location.hash) {
     firstTitle1.textContent = language.ned.landNav1 + ";";
     firstTitle2.textContent = language.ned.landNav1 + ";";
     fiverrTopH2.innerHTML = language.ned.fiverrTopH2;
-    fiverrTopMe.textContent = language.ned.fiverrTopMe;
     fiverrTopParagraph.innerHTML = language.ned.fiverrTopParagraph;
     fiverrTopParagraph.innerHTML = language.ned.fiverrTopParagraph;
     fiverrBottomPara.innerHTML = language.ned.fiverrBottomPara;
@@ -326,7 +321,7 @@ faax.addEventListener('click', closeSmallDeal)
 dealButton.addEventListener('click', scrollDown)
 denieButt.addEventListener('click', closeDeal)
 
-// openDeal()
+openDeal()
 
 function closeDeal() {
   dealBG.classList.remove('shown')

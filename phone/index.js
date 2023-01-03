@@ -120,7 +120,7 @@ function delay(time) {
     } else {
       firstTitle[0].classList.remove("active");
     }  
-    if (lastKnownScrollPosition > 980) {
+    if (lastKnownScrollPosition > 780) {
       firstText[0].classList.add("active");
     } else {
       firstText[0].classList.remove("active");
@@ -130,7 +130,7 @@ function delay(time) {
     } else {
       firstFiverrTop[0].classList.remove("active");
     } 
-    if (lastKnownScrollPosition > 1683) {
+    if (lastKnownScrollPosition > 1400) {
       document.querySelector('.fiverrTopP').classList.add('hovered')
       document.querySelector('.fiverrTopH2Contain').classList.add('hovered')
       document.querySelector('.fiverrTopH2').classList.add('hovered')
@@ -161,6 +161,32 @@ function delay(time) {
     } else if(lastKnownScrollPosition < 2100){
       document.querySelector('.work1Text').classList.remove('active')
     }
+    if (lastKnownScrollPosition > 2900) {
+      document.querySelector('.review1').classList.add('active')
+    } else if(lastKnownScrollPosition < 2500){
+      document.querySelector('.review1').classList.remove('active')
+    }
+    if (lastKnownScrollPosition > 3100) {
+      document.querySelector('.review2').classList.add('active')
+    } else if(lastKnownScrollPosition < 2500){
+      document.querySelector('.review2').classList.remove('active')
+    }
+    if (lastKnownScrollPosition > 3600) {
+      document.querySelector('.PC1').classList.add('active')
+    } else if(lastKnownScrollPosition < 3000){
+      document.querySelector('.PC1').classList.remove('active')
+    }
+    if (lastKnownScrollPosition > 3900) {
+      document.querySelector('.PC2').classList.add('active')
+    } else if(lastKnownScrollPosition < 3000){
+      document.querySelector('.PC2').classList.remove('active')
+    }
+    if (lastKnownScrollPosition > 4200) {
+      document.querySelector('.PC4').classList.add('active')
+    } else if(lastKnownScrollPosition < 3000){
+      document.querySelector('.PC4').classList.remove('active')
+    }
+    
   }
   
   document.addEventListener('scroll', function(e) {
@@ -205,17 +231,17 @@ function delay(time) {
   
   var language = {
     ned: {
-      landNav1: 'Wat Wij Voor U Zullen Doen',
+      landNav1: 'Wat Wij Voor U Gaan Doen',
       landNav2: 'Ons Werk',
       landNav3: 'Persoonlijke Reviews',
       landNav5: 'Pakketten',
-      firstPartTextPara: 'Wij zullen u helpen met uw website ideeën en zal ze uitvoeren als het mogelijk is! <br/> Wij zullen voor u en uw bedrijf een website maken vanaf maar <strong class="price">€9</strong><strong>.99!</strong>',
+      firstPartTextPara: 'Wij gaan u helpen met uw website ideeën en zal ze uitvoeren als het mogelijk is! <br/> Wij gaan voor u en uw bedrijf een website maken vanaf maar <strong class="price">€9</strong><small class="raleway">.99!</small>',
       fiverrTopH2: ' Contact <br/><var>Bericht <br/>Benader <br/>Werk Met </var>',
       fiverrTopParagraph: "Contact ons over wat u van plan bent en dan zullen we u zo snel mogelijk terug mailen over <strong>wat wij voor u kunnen beteken!</strong> Weet u nog niet zeker wat u gedaan wil hebben?<strong> Wij helpen u!</strong>",
       fiverrBottomPara: 'Alternatief, Kunt u ons berichten op <a href="https://www.fiverr.com/share/EormkD" target="_blank">Fiverr</a>',
       myWork: 'Ons Werk',
       workParagraph1: 'Een website voor de startende producer <strong>Livian Beats</strong> voor hem om zijn muziek te uploaden en te verkopen voor het publiek',
-      reviewText1: 'WebCheek heeft een prachtige website gemaakt voor mij die ik nodig had voor mijn business. Nu kan ik mijn product verkopen vanaf mijn eigen website in plaats van van een dere partij bedrijf. Zij waren goed om mee te werken en blij om mij te helpen met nieuwe ideeën (het was ook fijn dat zij mijn moeder taal spreken, nederlands)',
+      reviewText1: 'WebCheek heeft een prachtige website gemaakt voor mij die ik nodig had voor mijn business. Nu kan ik mijn product verkopen vanaf mijn eigen website in plaats van van een derde partij bedrijf. Zij waren goed om mee te werken en blij om mij te helpen met nieuwe ideeën (het was ook fijn dat zij mijn moeder taal spreken, nederlands)',
       reviewText2: 'Ik had een idee voor een website maar toen bedacht ik me dat ik helemaal geen website kan maken. Dus ik nam contact op met WebCheek om mijn idee uit te voeren, zij hielpen mij met de puntjes op de i en leverde een mooie en goed werkende website af. Ik ben heel blij met me uitkomst',
       fullName: 'Hele naam...',
       text: 'Wat Heb Je Nodig...',
@@ -239,16 +265,20 @@ function delay(time) {
       li11: '<i class="fa-solid bad fa-x"></i>Geen SEO',
       li17: "<i class='fa-solid fa-check'></i>Oneindige pagina's",
       li18: '<i class="fa-solid fa-check"></i>Domein + Hosting',
-      li19: "<i class='fa-solid fa-check'></i>Anything you want<b class='mark'>*<span id='tooltip2' class='tooltip2'>As long as it's to our expertise</span></b>",
+      li19: "<i class='fa-solid fa-check'></i>Alles wat u wilt<b class='mark'>*<span id='tooltip2' class='tooltip2'>As long as it's to our expertise</span></b>",
       li20: '<i class="fa-solid fa-check"></i>Alles van de andere pakketten',
       basicPack: 'Basis Pakket',
       standardPack: 'Standaard Pakket',
       customPack: 'Custom Pakket',
       fifthPartHead: 'Pakketten',
       deliveryTime: 'Aflever tijd kan verschillen met de moeilijkheid van de taak',
-      messageLabel: 'Wat heb je van ons nodig (Vertel in detail)',
+      messageLabel: 'Wat heb je van ons nodig (Vertel in detaill)',
       tooltip: 'Prijs ligt aan de taak',
       tooltip2: 'Zolang het in ons skillvak valt',
+      saleDepends: '* 10% korting vanaf €15, 30% korting vanaf €25. Geldt alleen voor uw eerste bestelling',
+      saleDependsSmall: '* 10% korting vanaf €15, 30% korting vanaf €25. Geldt alleen voor uw eerste bestelling',
+      priceDepends: '* Prijs ligt aan de taak',
+      anythingDepends: '* Zolang het in ons skillvak valt',
     }
   };
   
@@ -306,6 +336,10 @@ function delay(time) {
       MessageLabel.textContent = language.ned.messageLabel;
       tooltip.textContent = language.ned.tooltip;
       tooltip2.textContent = language.ned.tooltip2;
+      saleDepends.textContent = language.ned.saleDepends;
+      saleDependsSmall.textContent = language.ned.saleDependsSmall;
+      priceDepends.textContent = language.ned.priceDepends;
+      anythingDepends.textContent = language.ned.anythingDepends;
     }
     if (window.location.hash === "#eng") {
       english()
