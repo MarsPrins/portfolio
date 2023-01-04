@@ -2,6 +2,8 @@
 
 // jQuery
 
+$("#checkbox").attr("checked", true);
+
 (function($) {
 	$.fn.extend({
 		jParallax: function(opt) {
@@ -31,9 +33,11 @@ $(".cloud2").jParallax({ moveFactor: 13, targetContainer: ".landingPart" });
 $(".cloud3").jParallax({ moveFactor: 19, targetContainer: ".landingPart" });
 $(".cloud4").jParallax({ moveFactor: 25, targetContainer: ".landingPart" });
 
-$(".mouse-background").jParallax({ moveFactor: -5, targetContainer: ".landingPart" });
-$(".mouse-middle").jParallax({ moveFactor: -10, targetContainer: ".landingPart" });
-$(".mouse-for").jParallax({ moveFactor: -15, targetContainer: ".landingPart" });
+$(".mouse-background").jParallax({ moveFactor: 5, targetContainer: ".landingPart" });
+$(".mouse-middle").jParallax({ moveFactor: 10, targetContainer: ".landingPart" });
+$(".mouse-for").jParallax({ moveFactor: 15, targetContainer: ".landingPart" });
+
+$(".svgs").jParallax({ moveFactor: 10, targetContainer: ".dealBG" });
 
 // end of jQuery
 
@@ -55,6 +59,7 @@ changeFavicon();
 setInterval(changeFavicon, 1000);
 
 var submitted = false;
+var submitted2 = false;
 
 
 if (localStorage.getItem('d1u2t3c4h5?') == 'y1e2s') {
@@ -135,8 +140,6 @@ var firstTitle = document.getElementsByClassName("firstPartTitle")
 var firstText = document.getElementsByClassName("firstPartText")
 var firstFiverrTop = document.getElementsByClassName("firstPartFiverrTop")
 var firstFiverrBottom = document.getElementsByClassName("firstPartFiverrBottom")
-
-
 
 function doSomething() {
   // console.log(lastKnownScrollPosition)
@@ -236,6 +239,11 @@ function fiverr() {
 }
 
 
+function emailEntered() {
+  localStorage.setItem('brief-ingevoerd', 'yes')
+}
+
+
 var dataReload = document.querySelectorAll("[data-reload]");
 
 var language = {
@@ -257,10 +265,10 @@ var language = {
     discountCode: 'Kortings Code...',
     submit: 'Opsturen',
     dealHead: '<strong class="sale">30% KORTING<b class="mark">* <span class="markSpan">10% korting vanaf €15, 30% korting vanaf €30 op uw eerste bestelling</span></b></strong>',
-    dealP: 'Wanneer u de code hieronder gebruikt...',
-    dealButt: 'Krijg mijn 30% KORTING!',
-    dealDenie: 'Nee bedankt, ik betaal liever de hele prijs',
+    dealButt: 'Krijg mijn kortingscode!',
     discountHead: 'KRIJG TOT 30% KORTING<b class="mark">* <span class="markSpan">10% off from €15, 30% off from €30 op uw eerste bestelling</span></b> met code <b class="discountCode">XMAS</b>',
+    dealP: 'Meld u hieronder aan...',
+    checkLabel: 'Ontvang de beste nieuwsbrief <input type="checkbox" id="checkbox" name="entry.1199479329" value="yes"> <span class="checkmark"></span>',
     li1: '<i class="fa-solid fa-yellow fa-check"></i>1 pagina',
     li2: '<i class="fa-solid fa-check"></i>Goedkoop',
     li3: '<i class="fa-solid bad fa-x"></i>Niet Interactief',
@@ -314,10 +322,10 @@ if (window.location.hash) {
     discountCode.placeholder = language.ned.discountCode;
     submit.value = language.ned.submit;
     dealHead.innerHTML = language.ned.dealHead;
-    dealP.textContent = language.ned.dealP;
-    dealButt.innerText = language.ned.dealButt;
-    dealDenie.textContent = language.ned.dealDenie;
+    dealButt.value = language.ned.dealButt;
     discountHead.innerHTML = language.ned.discountHead;
+    dealP.textContent = language.ned.dealP;
+    checkLabel.innerHTML = language.ned.checkLabel;
     li1.innerHTML = language.ned.li1;
     li2.innerHTML = language.ned.li2;
     li3.innerHTML = language.ned.li3;
@@ -354,18 +362,20 @@ var discountSmall = document.querySelector('.discountSmall');
 var dealButton = document.querySelector('.dealButton');
 var fourthPart = document.querySelector('#fourthPart');
 var landPart = document.querySelector('.landingPart');
-var denieButt = document.querySelector('.dealDenie');
 
 faX.addEventListener('click', closeDeal)
 faax.addEventListener('click', closeSmallDeal)
-dealButton.addEventListener('click', scrollDown)
-denieButt.addEventListener('click', closeDeal)
 
-// openDeal()
+
+if (localStorage.getItem('brief-ingevoerd') !== 'yes') {
+  openDeal()
+}
 
 function closeDeal() {
   dealBG.classList.remove('shown')
-  openSmallDeal()
+  if (localStorage.getItem('brief-ingevoerd') == yes) {
+    openSmallDeal()
+  }
 }
 function openDeal() {
   dealBG.classList.add('shown')

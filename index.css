@@ -18,7 +18,7 @@
     --txtBlack: #3d3d3d;
     --txtcolor: rgb(42, 106, 129);
     --hover: #b5f4ff;
-    --line: rgb(4, 117, 119);
+    --line: rgb(109, 166, 181);
     --shadow: rgba(37, 37, 37, 0.404);
     
     --mainFont: 'gothic', sans-serif;
@@ -215,10 +215,13 @@ body {
   }
   .deal {
     min-width: 90%;
-    min-height: 70%;
+    min-height: 85%;
   }
   .dealHead {
-    font-size: 5vw;
+    font-size: 80px;
+  }
+  .holidays {
+    font-size: 50px;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -230,10 +233,13 @@ body {
   }
   .deal {
     min-width: 60%;
-    min-height: 65%;
+    min-height: 75%;
   }
   .dealHead {
-  font-size: 4vw;
+  font-size: 85px;
+  }
+  .holidays {
+    font-size: 60px;
   }
 }
 
@@ -330,7 +336,7 @@ body {
   height: 100%;
   position: fixed;
   z-index: 9996;
-  background-color: rgba(0, 0, 0, 0.494);
+  background-color: rgba(0, 0, 0, 0.5);
   transition: .4s;
 }
 
@@ -348,8 +354,7 @@ body {
 }
 
 .dealContainer {
-  background-color: rgb(145, 248, 255);
-  background-image: url(img/dealBG.png);
+  background-color: #a2e2fe;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -358,57 +363,201 @@ body {
   border-radius: 10px;
 }
 
+.holidays {
+  font-family: var(--boldTitleFont);
+  color: var(--txtBlack);
+  text-align: center;
+  position: relative;
+  top: 90px;
+}
+
 .dealHead {
   text-align: center;
   color: var(--txtBlack);
   /* font-size: 4vw; */
   font-family: var(--boldTitleFont);
+  position: relative;
 }
 
-.dealP {
-  font-size: 30px;
-  margin-top: 5%;
-  font-family: var(--titleFont);
-  text-align: center;
-  color: var(--txtBlack);
-}
-
-.code {
-  margin-top: -1%;
-  text-align: center;
-  color: var(--txtBlack);
-  font-family: var(--boldTitleFont);
-  font-size: 70px;
-  letter-spacing: 30px;
-}
-
-.dealButton {
-  cursor: pointer;
-  width: 50%;
+.saleForm {
   position: relative;
   left: 50%;
   translate: -50%;
-  height: 80px;
-  border: none;
-  border-radius: 10px;
-  background: var(--bg);
-  font-size: 30px;
-  font-family: var(--boldTitleFont);
+  min-height: 200px;
+  width: 60%;
+}
+
+.saleEmail {
+  width: 100%;
+  height: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 2px var(--line);
+  outline: none;
+  border-top-right-radius: 15px;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+
+.saleEmail, select{
+  font-size: 40px;
+  font-family: arial, sans-serif;
+  padding-left: 20px;
+  color: var(--txtBlack);
+}
+
+.saleEmail::placeholder {
+  font-size: 25px;
+}
+
+.checkLabel {
+  position: relative;
+  left: 20%;
+  top: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--txtBlack);
+  font-family: var(--mainFont);
+}
+
+#checkbox {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  display: block;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  position: absolute;
+  left: 100%;
+  bottom: -5px;
+  cursor: pointer;
+}
+
+.checkmark:hover {
+  background-color: #ccc;
+}
+
+#checkbox:checked ~ .checkmark {
+  background-color: #2195f382;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+#checkbox:checked ~ .checkmark:after {
+  display: block;
+}
+
+.saleForm .checkmark:after {
+  left: calc(50% - 5px);
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.dealButton {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 100px;
+  width: 70%;
+  height: 100px;
+  border: solid 2px var(--line);
+  outline: none;
+  background-color: rgba(238, 255, 254, 0.391);
+  font-size: 2.3vw;
+  font-family: var(--mainFont);
+  font-weight: 900;
   color: var(--txtBlack);
   transition: .4s;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .dealButton:hover {
   scale: .95;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
-.dealDenie {
+.dealP {
   position: absolute;
-  bottom: 5%;
   left: 50%;
-  translate: -50%;
-  cursor: pointer;
-  text-decoration: underline;
+  top: 50%;
+  translate: -50% -50%;
+  font-size: 20px;
+  font-family: var(--mainFont);
+  font-weight: 700;
+}
+
+.svgs{
+  position: absolute;
+}
+
+.svg1 {
+  width: 150px;
+  left: -45px;
+  top: -45px;
+  rotate: -45deg;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #a2e2fe;
+}
+
+.svg2 {
+  width: 150px;
+  top: 40%;
+  rotate: 30deg;
+  opacity: .7;
+  left: 5%;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+.svg3 {
+  width: 150px;
+  top: 10%;
+  rotate: -30deg;
+  opacity: .7;
+  right: 5%;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+.svg4 {
+  width: 150px;
+  bottom: 0%;
+  rotate: 10deg;
+  opacity: .7;
+  right: 0%;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+.svg5 {
+  bottom: -35%;
+  scale: .8;
+  rotate: 10deg;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
 
 .faax {
@@ -453,6 +602,14 @@ body {
   font-family: var(--mainFont);
   cursor: pointer;
   position: relative;
+  font-size: 30px;
+  bottom: 40px;
+  left: 10px;
+}
+
+.marksmall {
+  bottom: 10px;
+  left: 0px;
 }
 
 .mark:hover .markSpan {
