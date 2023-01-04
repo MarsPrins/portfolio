@@ -50,19 +50,19 @@ body {
     margin-bottom: 1000px;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-    background-color: transparent;
+/* ::-webkit-scrollbar {
+    width: 15px;
   }
 
 ::-webkit-scrollbar-track {
     background-color: transparent;
+    position: absolute;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color:  var(--txtBlack);
     border-radius: 25px;
-}
+} */
 
 
 @media only screen and (max-width: 1360px) {
@@ -288,11 +288,12 @@ body {
 
 .blueBG {
     background-image: url(img/blue.jpg);
-    width: 100%;
+    width: 110%;
     height: 115%;
     z-index: -1;
     position: fixed;
-    /* margin-top: -100px; */
+    top: -50px;
+    left: -50px;
     margin: 0;
 }
 
@@ -393,7 +394,6 @@ body {
   background: var(--bg);
   font-size: 30px;
   font-family: var(--boldTitleFont);
-  letter-spacing: 5px;
   color: var(--txtBlack);
   transition: .4s;
 }
@@ -536,15 +536,49 @@ body {
     -webkit-filter: blur(20px);
 }
 
-.landImage {
-    width: 100%;
-    height: 125%;
-    object-fit:contain;
-    transition: .4s;
-    position: relative;
-    bottom: 5%;
-    left: 27%;
-    z-index: 60;
+.mouseMovers {
+  position: relative;
+  left: 550px;
+}
+
+.mouse-background {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 100%;
+  height: 1000px;
+  object-fit: contain;
+  scale: .8;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: 1;
+}
+
+.mouse-middle {
+  position: absolute;
+  top: -50px;
+  right: 200px;
+  width: 100%;
+  height: 1000px;
+  object-fit: contain;
+  scale: .8;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  z-index: 2;
+}
+
+.mouse-for {
+  position: absolute;
+  top: -20px;
+  right: 250px;
+  width: 100%;
+  height: 1000px;
+  object-fit: contain;
+  scale: 1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  z-index: 3;
+  rotate: -10deg;
 }
 
 .cloudContainer {

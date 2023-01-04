@@ -1,3 +1,43 @@
+
+
+// jQuery
+
+(function($) {
+	$.fn.extend({
+		jParallax: function(opt) {
+			var defaults = { moveFactor: 5, targetContainer: 'body' },
+				o = $.extend(defaults, opt);
+			return this.each(function() {
+				var background = $(this);
+				$(o.targetContainer).on('mousemove', function(e){
+					mouseX = e.pageX;
+					mouseY = e.pageY;
+					windowWidth = $(window).width();
+					windowHeight = $(window).height();
+					percentX = (0-((mouseX/windowWidth)*o.moveFactor) - (o.moveFactor/2)+o.moveFactor)/2;
+					percentY = (0-((mouseY/windowHeight)*o.moveFactor) - (o.moveFactor/2)+o.moveFactor)/2;
+					background[0].style.transform = "translate("+percentX+"%,"+percentY+"%)";
+				});
+			});
+		}					
+	});
+}(jQuery));
+
+
+$(".blueBG").jParallax({ moveFactor: -3, targetContainer: ".landingPart" });
+$(".cloudContainer").jParallax({ moveFactor: 3, targetContainer: ".landingPart" });
+$(".cloud").jParallax({ moveFactor: 8, targetContainer: ".landingPart" });
+$(".cloud2").jParallax({ moveFactor: 13, targetContainer: ".landingPart" });
+$(".cloud3").jParallax({ moveFactor: 19, targetContainer: ".landingPart" });
+$(".cloud4").jParallax({ moveFactor: 25, targetContainer: ".landingPart" });
+
+$(".mouse-background").jParallax({ moveFactor: -5, targetContainer: ".landingPart" });
+$(".mouse-middle").jParallax({ moveFactor: -10, targetContainer: ".landingPart" });
+$(".mouse-for").jParallax({ moveFactor: -15, targetContainer: ".landingPart" });
+
+// end of jQuery
+
+
 function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
@@ -321,7 +361,7 @@ faax.addEventListener('click', closeSmallDeal)
 dealButton.addEventListener('click', scrollDown)
 denieButt.addEventListener('click', closeDeal)
 
-openDeal()
+// openDeal()
 
 function closeDeal() {
   dealBG.classList.remove('shown')
