@@ -361,7 +361,7 @@ faax.addEventListener('click', closeSmallDeal)
 dealButton.addEventListener('click', scrollDown)
 denieButt.addEventListener('click', closeDeal)
 
-// openDeal()
+openDeal()
 
 function closeDeal() {
   dealBG.classList.remove('shown')
