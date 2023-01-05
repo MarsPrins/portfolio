@@ -150,6 +150,7 @@ body {
   position: relative;
   bottom: 20px;
   font-size: 30px;
+  pointer-events: none;
 }
 
 .dealHead {
@@ -159,6 +160,7 @@ body {
   font-family: var(--boldTitleFont);
   position: relative;
   bottom: 50px;
+  pointer-events: none;
 }
 
 .saleForm {
@@ -340,6 +342,7 @@ body {
   color: var(--txtBlack);
   font-size: 20px;
   cursor: pointer;
+  z-index: 99;
 }
 
 .discountSmall {

@@ -384,6 +384,7 @@ img {
   text-align: center;
   position: relative;
   bottom: 40px;
+  pointer-events: none;
 }
 
 .dealHead {
@@ -393,6 +394,7 @@ img {
   font-family: var(--boldTitleFont);
   position: relative;
   bottom: 110px;
+  pointer-events: none;
 }
 
 .saleForm {
@@ -583,6 +585,7 @@ img {
   color: var(--txtBlack);
   font-size: 30px;
   cursor: pointer;
+  z-index: 99;
 }
 
 .discountSmall {
