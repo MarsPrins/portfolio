@@ -18,16 +18,33 @@
     <div class="dealBG">
         <div class="deal">
             <div class="dealContainer">
+                <div class="svgsCont">
+                    <img src="img/code.svg" alt="" class="svgs svg2">
+                    <img src="img/code (2).svg" alt="" class="svgs svg3">
+                    <img src="img/code (4).svg" alt="" class="svgs svg4">
+                    <img src="img/mouse-back.png" alt="" class="svgs svg5">
+                </div>
                 <i class="fa-solid fa-x faax"></i>
-                <h1 class="dealHead" id="dealHead"><strong class="sale">30% OFF<b class="mark">* <span  class="markSpan">10% off from €15, 30% off from €25. Only counts for your first order</span></b></strong> your first order</h1>
-                <p id="dealP" class="dealP">When you use code...</p>
-                <h2 class="code">XMAS</h2>
-                <button id="dealButt" class="dealButton">Get my 30% OFF!</button>
-                <div id="dealDenie" class="dealDenie">No thanks, i'd rather pay full price</div>
-                <p id="saleDepends" class="saleDependsBig">* 10% off from €15, 30% off from €25. Only counts for your first order</p>
+                <h2 class="holidays">Holidays Sale!</h2>
+                <h2 class="dealHead" id="dealHead"><strong class="sale">30% OFF<b class="mark">* <span  class="markSpan">10% off from €15, 30% off from €25. Only counts for your first order</span></b></strong></h2>
+                <p id="dealP" class="dealP">Just sign up below...</p>
+
+                <iframe name="hidden_iframe2" id="hidden_iframe2" style="display: none" onload="if(submitted2){
+                    window.location='./'; document.querySelector('.succesfully').classList.add('active');} else {document.querySelector('.succesfully').classList.remove('active');} emailEntered()"></iframe>
+                
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeagNCdmcmwq_GyLmua1X6gNwXh3xfa1NOIanXSUHEHOAqBbA/formResponse" class="saleForm" target="hidden_iframe2" method="POST" onsubmit="submitted2=true">
+                    <input required type="email" name="entry.1108582006" id="" class="saleEmail" placeholder="Email...">
+                    <label id="checkLabel" class="checkLabel" for="checkbox">Get our amazing newsletter
+                        <input type="checkbox" id="checkbox" name="entry.1199479329" value="yes">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input id="dealButt" class="dealButton" type="submit" value="Get my discount code!">
+                    <p id="saleDepends" class="saleDependsBig">* 10% off from €15, 30% off from €25. Only counts for your first order</p>
+                </form>
             </div>
         </div>
     </div>
+
 
     <div class="discountSmall">
         <h1 id="discountHead" class="discountHead">GET UP TO 30% OFF<b class="mark">* <span class="markSpan" id="markSpan">10% off from €15, 30% off from €25. Only counts for your first order</span></b> with code <b class="discountCode">XMAS</b></h1>

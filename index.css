@@ -64,6 +64,10 @@ body {
     border-radius: 25px;
 } */
 
+img {
+  user-select: none;
+}
+
 
 @media only screen and (max-width: 1360px) {
   img.landImage {
@@ -221,7 +225,7 @@ body {
     font-size: 80px;
   }
   .holidays {
-    font-size: 50px;
+    font-size: 6vw;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -233,13 +237,13 @@ body {
   }
   .deal {
     min-width: 60%;
-    min-height: 75%;
+    min-height: 600px;
   }
   .dealHead {
   font-size: 85px;
   }
   .holidays {
-    font-size: 60px;
+    font-size: 5vw;
   }
 }
 
@@ -291,6 +295,17 @@ body {
     margin-top: -50px;
   }
 }
+
+/* @media only screen and (min-height: 680) {
+  .saleForm {
+    bottom: 100px;
+  }
+}
+@media only screen and (max-height: 680) {
+  .saleForm {
+    bottom: 200px;
+  }
+} */
 
 .blueBG {
     background-image: url(img/blue.jpg);
@@ -368,7 +383,7 @@ body {
   color: var(--txtBlack);
   text-align: center;
   position: relative;
-  top: 90px;
+  bottom: 40px;
 }
 
 .dealHead {
@@ -377,11 +392,13 @@ body {
   /* font-size: 4vw; */
   font-family: var(--boldTitleFont);
   position: relative;
+  bottom: 110px;
 }
 
 .saleForm {
   position: relative;
   left: 50%;
+  bottom: 20vh;
   translate: -50%;
   min-height: 200px;
   width: 60%;
@@ -389,7 +406,7 @@ body {
 
 .saleEmail {
   width: 100%;
-  height: 50px;
+  height: 10%;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -471,10 +488,10 @@ body {
 }
 
 .dealButton {
-  position: absolute;
+  position: relative;
   left: 50%;
   translate: -50%;
-  top: 100px;
+  top: 20px;
   width: 70%;
   height: 100px;
   border: solid 2px var(--line);
@@ -499,10 +516,9 @@ body {
 }
 
 .dealP {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
+  position: relative;
+  left: 40%;
+  bottom: 25%;
   font-size: 20px;
   font-family: var(--mainFont);
   font-weight: 700;
@@ -553,7 +569,7 @@ body {
 }
 
 .svg5 {
-  bottom: -35%;
+  bottom: -300px;
   scale: .8;
   rotate: 10deg;
   filter: blur(5px);
@@ -1123,7 +1139,7 @@ body {
   text-align: center;
   font-family: var(--boldTitleFont);
   color: var(--txtBlack);
-  transition: 1s;
+  transition: .4s;
 }
 
 #firstPartTextHead.hovered {
@@ -1144,7 +1160,7 @@ body {
   position: absolute;
   font-family: var(--mainFont);
   transform: translateX(-1000px);
-  transition: 1s ease-in-out;
+  transition: .8s ease-out;
   scale: .6;
   opacity: 0;
 }
