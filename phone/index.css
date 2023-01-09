@@ -149,14 +149,14 @@ body {
   text-align: center;
   position: relative;
   bottom: 20px;
-  font-size: 30px;
+  font-size: 5vh;
   pointer-events: none;
 }
 
 .dealHead {
   text-align: center;
   color: var(--txtBlack);
-  font-size: 35px;
+  font-size: 5vh;
   font-family: var(--boldTitleFont);
   position: relative;
   bottom: 50px;
@@ -182,6 +182,7 @@ body {
   border-top-right-radius: 15px;
   background-color: transparent;
   font-size: 20px;
+  position: relative;
 }
 
 
@@ -255,9 +256,8 @@ body {
 }
 
 .dealButton {
+  margin: auto;
   position: relative;
-  left: 50%;
-  translate: -50%;
   bottom: -5vh;
   width: 100vw;
   height: 100px;
@@ -1754,4 +1754,15 @@ var {
 .mark:active .tooltip,
 .mark:active .tooltip2 {
   visibility: visible;
+}
+
+
+
+
+
+
+@media screen and (max-width: 320px) {
+  .dealButton {
+    height: 50px;
+  }
 }
