@@ -332,7 +332,7 @@ body {
   text-align: center;
   color: var(--txtBlack);
   position: absolute;
-  bottom: -20px;
+  bottom: 30px;
 }
 
 .faax {
