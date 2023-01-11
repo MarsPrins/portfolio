@@ -228,7 +228,7 @@ setInterval(() => {
   if (screen.width < 500) {
     window.location = "phone";
   }
-}, 1000);
+}, 100);
 
 function contact() {
   document.getElementById('fourthPart').scrollIntoView();
